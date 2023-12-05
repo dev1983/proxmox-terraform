@@ -1,0 +1,12 @@
+resource "proxmox_lxc" "basic" {
+  target_node  = "proxserver"
+  hostname     = "fresh-ubuntu"
+  //ostemplate   = "local:vztmpl/ubuntu-20.04-standard_20.04-1_amd64.tar.gz"
+  unprivileged = true
+  clone = "115"
+  // Terraform will crash without rootfs defined
+  rootfs {
+    storage = "local-lvm"
+    size    = "10G"
+  }
+}

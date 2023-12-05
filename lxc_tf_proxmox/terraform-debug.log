@@ -1,0 +1,1678 @@
+2023-11-27T21:41:52.731Z [INFO]  Terraform version: 1.6.4
+2023-11-27T21:41:52.731Z [DEBUG] using github.com/hashicorp/go-tfe v1.36.0
+2023-11-27T21:41:52.731Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.19.1
+2023-11-27T21:41:52.731Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2023-11-27T21:41:52.731Z [DEBUG] using github.com/zclconf/go-cty v1.14.1
+2023-11-27T21:41:52.731Z [INFO]  Go runtime version: go1.21.3
+2023-11-27T21:41:52.731Z [INFO]  CLI args: []string{"terraform", "plan"}
+2023-11-27T21:41:52.731Z [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2023-11-27T21:41:52.731Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-11-27T21:41:52.731Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-11-27T21:41:52.731Z [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2023-11-27T21:41:52.731Z [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2023-11-27T21:41:52.731Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2023-11-27T21:41:52.731Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2023-11-27T21:41:52.731Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2023-11-27T21:41:52.732Z [INFO]  CLI command args: []string{"plan"}
+2023-11-27T21:41:52.733Z [DEBUG] New state was assigned lineage "215ca55a-657f-536f-6b8d-f873defe6d10"
+2023-11-27T21:41:52.858Z [DEBUG] checking for provisioner in "."
+2023-11-27T21:41:52.861Z [DEBUG] checking for provisioner in "/usr/bin"
+2023-11-27T21:41:52.862Z [INFO]  backend/local: starting Plan operation
+2023-11-27T21:41:52.864Z [DEBUG] created provider logger: level=debug
+2023-11-27T21:41:52.864Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T21:41:52.887Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T21:41:52.887Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12199
+2023-11-27T21:41:52.887Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T21:41:52.894Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T21:41:52.894Z
+2023-11-27T21:41:52.934Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin3804340198 network=unix timestamp=2023-11-27T21:41:52.934Z
+2023-11-27T21:41:52.934Z [DEBUG] provider: using plugin: version=5
+2023-11-27T21:41:52.959Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T21:41:52.961Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12199
+2023-11-27T21:41:52.961Z [DEBUG] provider: plugin exited
+2023-11-27T21:41:52.961Z [DEBUG] Building and walking validate graph
+2023-11-27T21:41:52.961Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T21:41:52.962Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_id var.proxmox_api_token_secret var.proxmox_api_url]
+2023-11-27T21:41:52.962Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T21:41:52.962Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T21:41:52.962Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T21:41:52.962Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T21:41:52.962Z [DEBUG] Starting graph walk: walkValidate
+2023-11-27T21:41:52.963Z [DEBUG] created provider logger: level=debug
+2023-11-27T21:41:52.963Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T21:41:52.972Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T21:41:52.973Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12206
+2023-11-27T21:41:52.973Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T21:41:52.979Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T21:41:52.979Z
+2023-11-27T21:41:53.019Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin3075584630 network=unix timestamp=2023-11-27T21:41:53.018Z
+2023-11-27T21:41:53.019Z [DEBUG] provider: using plugin: version=5
+2023-11-27T21:41:53.050Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T21:41:53.051Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12206
+2023-11-27T21:41:53.052Z [DEBUG] provider: plugin exited
+2023-11-27T21:41:53.052Z [INFO]  backend/local: plan calling Plan
+2023-11-27T21:41:53.052Z [DEBUG] Building and walking plan graph for NormalMode
+2023-11-27T21:41:53.052Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T21:41:53.052Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (expand)" references: []
+2023-11-27T21:41:53.052Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T21:41:53.052Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T21:41:53.052Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T21:41:53.052Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_url var.proxmox_api_token_secret var.proxmox_api_token_id]
+2023-11-27T21:41:53.053Z [DEBUG] Starting graph walk: walkPlan
+2023-11-27T21:41:53.053Z [DEBUG] created provider logger: level=debug
+2023-11-27T21:41:53.053Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T21:41:53.063Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T21:41:53.063Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12213
+2023-11-27T21:41:53.063Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T21:41:53.071Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T21:41:53.071Z
+2023-11-27T21:41:53.110Z [DEBUG] provider: using plugin: version=5
+2023-11-27T21:41:53.110Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin2174155029 network=unix timestamp=2023-11-27T21:41:53.110Z
+2023-11-27T21:41:53.135Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/telmate/proxmox\"]" changed the config value, but that value is unused
+2023-11-27T21:41:53.158Z [DEBUG] Resource instance state not found for node "proxmox_lxc.basic", instance proxmox_lxc.basic
+2023-11-27T21:41:53.158Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T21:41:53.159Z [DEBUG] refresh: proxmox_lxc.basic: no state, so not refreshing
+2023-11-27T21:41:53.165Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an invalid plan for proxmox_lxc.basic, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .protection: planned value cty.False for a non-computed attribute
+      - .cpuunits: planned value cty.NumberIntVal(1024) for a non-computed attribute
+      - .onboot: planned value cty.False for a non-computed attribute
+      - .arch: planned value cty.StringVal("amd64") for a non-computed attribute
+      - .start: planned value cty.False for a non-computed attribute
+      - .swap: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .cmode: planned value cty.StringVal("tty") for a non-computed attribute
+      - .cores: planned value cty.NumberIntVal(1) for a non-computed attribute
+      - .console: planned value cty.True for a non-computed attribute
+      - .memory: planned value cty.NumberIntVal(512) for a non-computed attribute
+      - .cpulimit: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .tty: planned value cty.NumberIntVal(2) for a non-computed attribute
+2023-11-27T21:41:53.166Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T21:41:53.167Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12213
+2023-11-27T21:41:53.168Z [DEBUG] provider: plugin exited
+2023-11-27T21:41:53.168Z [DEBUG] building apply graph to check for errors
+2023-11-27T21:41:53.168Z [DEBUG] Resource state not found for node "proxmox_lxc.basic", instance proxmox_lxc.basic
+2023-11-27T21:41:53.168Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T21:41:53.168Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T21:41:53.168Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T21:41:53.168Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T21:41:53.168Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T21:41:53.169Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_id var.proxmox_api_token_secret var.proxmox_api_url]
+2023-11-27T21:41:53.169Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (expand)" references: []
+2023-11-27T21:41:53.169Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T21:41:53.169Z [INFO]  backend/local: plan operation completed
+2023-11-27T21:41:57.049Z [INFO]  Terraform version: 1.6.4
+2023-11-27T21:41:57.050Z [DEBUG] using github.com/hashicorp/go-tfe v1.36.0
+2023-11-27T21:41:57.050Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.19.1
+2023-11-27T21:41:57.050Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2023-11-27T21:41:57.050Z [DEBUG] using github.com/zclconf/go-cty v1.14.1
+2023-11-27T21:41:57.050Z [INFO]  Go runtime version: go1.21.3
+2023-11-27T21:41:57.050Z [INFO]  CLI args: []string{"terraform", "apply"}
+2023-11-27T21:41:57.050Z [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2023-11-27T21:41:57.050Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-11-27T21:41:57.050Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-11-27T21:41:57.050Z [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2023-11-27T21:41:57.050Z [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2023-11-27T21:41:57.050Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2023-11-27T21:41:57.050Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2023-11-27T21:41:57.050Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2023-11-27T21:41:57.050Z [INFO]  CLI command args: []string{"apply"}
+2023-11-27T21:41:57.052Z [DEBUG] New state was assigned lineage "b63ea0b4-fcd7-1d1b-9926-54b5fe9535dd"
+2023-11-27T21:41:57.178Z [DEBUG] checking for provisioner in "."
+2023-11-27T21:41:57.182Z [DEBUG] checking for provisioner in "/usr/bin"
+2023-11-27T21:41:57.183Z [INFO]  backend/local: starting Apply operation
+2023-11-27T21:41:57.184Z [DEBUG] created provider logger: level=debug
+2023-11-27T21:41:57.184Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T21:41:57.208Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T21:41:57.208Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12229
+2023-11-27T21:41:57.208Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T21:41:57.229Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T21:41:57.215Z
+2023-11-27T21:41:57.255Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin1328178663 network=unix timestamp=2023-11-27T21:41:57.255Z
+2023-11-27T21:41:57.255Z [DEBUG] provider: using plugin: version=5
+2023-11-27T21:41:57.281Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T21:41:57.283Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12229
+2023-11-27T21:41:57.283Z [DEBUG] provider: plugin exited
+2023-11-27T21:41:57.283Z [DEBUG] Building and walking validate graph
+2023-11-27T21:41:57.283Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T21:41:57.284Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T21:41:57.284Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T21:41:57.284Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T21:41:57.284Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T21:41:57.284Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_id var.proxmox_api_url var.proxmox_api_token_secret]
+2023-11-27T21:41:57.284Z [DEBUG] Starting graph walk: walkValidate
+2023-11-27T21:41:57.284Z [DEBUG] created provider logger: level=debug
+2023-11-27T21:41:57.285Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T21:41:57.294Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T21:41:57.294Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12236
+2023-11-27T21:41:57.294Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T21:41:57.302Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T21:41:57.302Z
+2023-11-27T21:41:57.341Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin491991595 network=unix timestamp=2023-11-27T21:41:57.341Z
+2023-11-27T21:41:57.342Z [DEBUG] provider: using plugin: version=5
+2023-11-27T21:41:57.378Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T21:41:57.379Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12236
+2023-11-27T21:41:57.379Z [DEBUG] provider: plugin exited
+2023-11-27T21:41:57.379Z [INFO]  backend/local: apply calling Plan
+2023-11-27T21:41:57.379Z [DEBUG] Building and walking plan graph for NormalMode
+2023-11-27T21:41:57.379Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T21:41:57.380Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (expand)" references: []
+2023-11-27T21:41:57.380Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T21:41:57.380Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T21:41:57.380Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T21:41:57.380Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_id var.proxmox_api_url var.proxmox_api_token_secret]
+2023-11-27T21:41:57.380Z [DEBUG] Starting graph walk: walkPlan
+2023-11-27T21:41:57.380Z [DEBUG] created provider logger: level=debug
+2023-11-27T21:41:57.380Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T21:41:57.390Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T21:41:57.390Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12243
+2023-11-27T21:41:57.390Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T21:41:57.397Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T21:41:57.397Z
+2023-11-27T21:41:57.436Z [DEBUG] provider: using plugin: version=5
+2023-11-27T21:41:57.437Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin2502425897 network=unix timestamp=2023-11-27T21:41:57.436Z
+2023-11-27T21:41:57.465Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/telmate/proxmox\"]" changed the config value, but that value is unused
+2023-11-27T21:41:57.485Z [DEBUG] Resource instance state not found for node "proxmox_lxc.basic", instance proxmox_lxc.basic
+2023-11-27T21:41:57.485Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T21:41:57.485Z [DEBUG] refresh: proxmox_lxc.basic: no state, so not refreshing
+2023-11-27T21:41:57.493Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an invalid plan for proxmox_lxc.basic, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .start: planned value cty.False for a non-computed attribute
+      - .cores: planned value cty.NumberIntVal(1) for a non-computed attribute
+      - .memory: planned value cty.NumberIntVal(512) for a non-computed attribute
+      - .cpulimit: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .cpuunits: planned value cty.NumberIntVal(1024) for a non-computed attribute
+      - .tty: planned value cty.NumberIntVal(2) for a non-computed attribute
+      - .arch: planned value cty.StringVal("amd64") for a non-computed attribute
+      - .swap: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .console: planned value cty.True for a non-computed attribute
+      - .protection: planned value cty.False for a non-computed attribute
+      - .cmode: planned value cty.StringVal("tty") for a non-computed attribute
+      - .onboot: planned value cty.False for a non-computed attribute
+2023-11-27T21:41:57.494Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T21:41:57.496Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12243
+2023-11-27T21:41:57.496Z [DEBUG] provider: plugin exited
+2023-11-27T21:41:57.496Z [DEBUG] building apply graph to check for errors
+2023-11-27T21:41:57.496Z [DEBUG] Resource state not found for node "proxmox_lxc.basic", instance proxmox_lxc.basic
+2023-11-27T21:41:57.497Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T21:41:57.497Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T21:41:57.497Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_id var.proxmox_api_token_secret var.proxmox_api_url]
+2023-11-27T21:41:57.497Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (expand)" references: []
+2023-11-27T21:41:57.497Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T21:41:57.497Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T21:41:57.497Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T21:41:57.497Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T21:41:57.499Z [DEBUG] command: asking for input: "\nDo you want to perform these actions?"
+2023-11-27T21:41:59.300Z [INFO]  backend/local: apply calling Apply
+2023-11-27T21:41:59.300Z [DEBUG] Building and walking apply graph for NormalMode plan
+2023-11-27T21:41:59.300Z [DEBUG] Resource state not found for node "proxmox_lxc.basic", instance proxmox_lxc.basic
+2023-11-27T21:41:59.300Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T21:41:59.300Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T21:41:59.301Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T21:41:59.301Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T21:41:59.301Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T21:41:59.301Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_id var.proxmox_api_token_secret var.proxmox_api_url]
+2023-11-27T21:41:59.301Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (expand)" references: []
+2023-11-27T21:41:59.301Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T21:41:59.302Z [DEBUG] Starting graph walk: walkApply
+2023-11-27T21:41:59.302Z [DEBUG] created provider logger: level=debug
+2023-11-27T21:41:59.302Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T21:41:59.311Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T21:41:59.312Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12250
+2023-11-27T21:41:59.312Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T21:41:59.320Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T21:41:59.319Z
+2023-11-27T21:41:59.359Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin3686928422 network=unix timestamp=2023-11-27T21:41:59.359Z
+2023-11-27T21:41:59.359Z [DEBUG] provider: using plugin: version=5
+2023-11-27T21:41:59.395Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/telmate/proxmox\"]" changed the config value, but that value is unused
+2023-11-27T21:41:59.419Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an invalid plan for proxmox_lxc.basic, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .cores: planned value cty.NumberIntVal(1) for a non-computed attribute
+      - .arch: planned value cty.StringVal("amd64") for a non-computed attribute
+      - .console: planned value cty.True for a non-computed attribute
+      - .swap: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .cpulimit: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .cmode: planned value cty.StringVal("tty") for a non-computed attribute
+      - .protection: planned value cty.False for a non-computed attribute
+      - .onboot: planned value cty.False for a non-computed attribute
+      - .tty: planned value cty.NumberIntVal(2) for a non-computed attribute
+      - .cpuunits: planned value cty.NumberIntVal(1024) for a non-computed attribute
+      - .memory: planned value cty.NumberIntVal(512) for a non-computed attribute
+      - .start: planned value cty.False for a non-computed attribute
+2023-11-27T21:41:59.419Z [INFO]  Starting apply for proxmox_lxc.basic
+2023-11-27T21:41:59.420Z [DEBUG] proxmox_lxc.basic: applying the planned Create change
+2023-11-27T21:41:59.422Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 21:41:59 [DEBUG] setting computed for "unused" from ComputedKeys: timestamp=2023-11-27T21:41:59.422Z
+2023-11-27T21:41:59.425Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 21:41:59 [DEBUG][LxcCreate] cloning LXC: timestamp=2023-11-27T21:41:59.425Z
+2023-11-27T21:42:01.486Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 21:42:01 [DEBUG][LxcCreate] Waiting for clone becoming ready: timestamp=2023-11-27T21:42:01.485Z
+2023-11-27T21:42:01.491Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 21:42:01 [DEBUG][LxcCreate] We must resize: timestamp=2023-11-27T21:42:01.491Z
+2023-11-27T21:42:01.491Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 21:42:01 [DEBUG][diskResize] resizing disk rootfs: timestamp=2023-11-27T21:42:01.491Z
+2023-11-27T21:42:01.901Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 21:42:01 [DEBUG][LxcCreate] start = false, not starting LXC: timestamp=2023-11-27T21:42:01.900Z
+2023-11-27T21:42:01.928Z [WARN]  Provider "provider[\"registry.terraform.io/telmate/proxmox\"]" produced an unexpected new value for proxmox_lxc.basic, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .nameserver: was null, but now cty.StringVal("192.168.1.203")
+      - .startup: was null, but now cty.StringVal("")
+      - .hookscript: was null, but now cty.StringVal("")
+      - .lock: was null, but now cty.StringVal("")
+      - .restore: was null, but now cty.False
+      - .hastate: was null, but now cty.StringVal("")
+      - .ignore_unpack_errors: was null, but now cty.False
+      - .bwlimit: was null, but now cty.NumberIntVal(0)
+      - .description: was null, but now cty.StringVal("")
+      - .searchdomain: was null, but now cty.StringVal("tinihub.com")
+      - .template: was null, but now cty.False
+      - .unique: was null, but now cty.False
+      - .force: was null, but now cty.False
+      - .hagroup: was null, but now cty.StringVal("")
+      - .tags: was null, but now cty.StringVal("")
+      - .rootfs[0].shared: was null, but now cty.False
+      - .rootfs[0].size: was cty.StringVal("8G"), but now cty.StringVal("100G")
+      - .rootfs[0].acl: was null, but now cty.False
+      - .rootfs[0].quota: was null, but now cty.False
+      - .rootfs[0].replicate: was null, but now cty.False
+      - .rootfs[0].ro: was null, but now cty.False
+2023-11-27T21:42:01.930Z [DEBUG] State storage *statemgr.Filesystem declined to persist a state snapshot
+2023-11-27T21:42:01.931Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T21:42:01.933Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12250
+2023-11-27T21:42:01.933Z [DEBUG] provider: plugin exited
+2023-11-27T22:31:46.283Z [INFO]  Terraform version: 1.6.4
+2023-11-27T22:31:46.283Z [DEBUG] using github.com/hashicorp/go-tfe v1.36.0
+2023-11-27T22:31:46.284Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.19.1
+2023-11-27T22:31:46.284Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2023-11-27T22:31:46.284Z [DEBUG] using github.com/zclconf/go-cty v1.14.1
+2023-11-27T22:31:46.284Z [INFO]  Go runtime version: go1.21.3
+2023-11-27T22:31:46.284Z [INFO]  CLI args: []string{"terraform", "init"}
+2023-11-27T22:31:46.284Z [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2023-11-27T22:31:46.284Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-11-27T22:31:46.284Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-11-27T22:31:46.284Z [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2023-11-27T22:31:46.284Z [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2023-11-27T22:31:46.284Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2023-11-27T22:31:46.284Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2023-11-27T22:31:46.284Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2023-11-27T22:31:46.285Z [INFO]  CLI command args: []string{"init"}
+2023-11-27T22:31:46.286Z [DEBUG] New state was assigned lineage "3aee3881-d716-2fa9-1e1e-a3580e9be08d"
+2023-11-27T22:31:46.409Z [DEBUG] checking for provisioner in "."
+2023-11-27T22:31:46.412Z [DEBUG] checking for provisioner in "/usr/bin"
+2023-11-27T22:31:46.414Z [DEBUG] Service discovery for registry.terraform.io at https://registry.terraform.io/.well-known/terraform.json
+2023-11-27T22:31:46.504Z [DEBUG] GET https://registry.terraform.io/v1/providers/telmate/proxmox/versions
+2023-11-27T22:31:49.598Z [INFO]  Terraform version: 1.6.4
+2023-11-27T22:31:49.598Z [DEBUG] using github.com/hashicorp/go-tfe v1.36.0
+2023-11-27T22:31:49.598Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.19.1
+2023-11-27T22:31:49.598Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2023-11-27T22:31:49.598Z [DEBUG] using github.com/zclconf/go-cty v1.14.1
+2023-11-27T22:31:49.598Z [INFO]  Go runtime version: go1.21.3
+2023-11-27T22:31:49.598Z [INFO]  CLI args: []string{"terraform", "plan"}
+2023-11-27T22:31:49.598Z [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2023-11-27T22:31:49.598Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-11-27T22:31:49.598Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-11-27T22:31:49.598Z [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2023-11-27T22:31:49.598Z [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2023-11-27T22:31:49.598Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2023-11-27T22:31:49.598Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2023-11-27T22:31:49.598Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2023-11-27T22:31:49.599Z [INFO]  CLI command args: []string{"plan"}
+2023-11-27T22:31:49.601Z [DEBUG] New state was assigned lineage "cda4564e-bdf7-fed2-6e30-d97d1b2f55d3"
+2023-11-27T22:31:49.723Z [DEBUG] checking for provisioner in "."
+2023-11-27T22:31:49.727Z [DEBUG] checking for provisioner in "/usr/bin"
+2023-11-27T22:31:49.728Z [INFO]  backend/local: starting Plan operation
+2023-11-27T22:31:49.730Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:31:49.730Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:31:49.753Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:31:49.753Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12294
+2023-11-27T22:31:49.753Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:31:49.761Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:31:49.760Z
+2023-11-27T22:31:49.800Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: network=unix address=/tmp/plugin2596906661 timestamp=2023-11-27T22:31:49.800Z
+2023-11-27T22:31:49.800Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:31:49.827Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:31:49.828Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12294
+2023-11-27T22:31:49.828Z [DEBUG] provider: plugin exited
+2023-11-27T22:31:49.829Z [DEBUG] Building and walking validate graph
+2023-11-27T22:31:49.829Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:31:49.829Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02" references: []
+2023-11-27T22:31:49.829Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T22:31:49.829Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T22:31:49.829Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T22:31:49.829Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_url var.proxmox_api_token_id var.proxmox_api_token_secret]
+2023-11-27T22:31:49.830Z [DEBUG] Starting graph walk: walkValidate
+2023-11-27T22:31:49.830Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:31:49.830Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:31:49.840Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:31:49.840Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12301
+2023-11-27T22:31:49.840Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:31:49.847Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:31:49.847Z
+2023-11-27T22:31:49.887Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:31:49.888Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: network=unix address=/tmp/plugin361409492 timestamp=2023-11-27T22:31:49.887Z
+2023-11-27T22:31:49.920Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:31:49.922Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12301
+2023-11-27T22:31:49.922Z [DEBUG] provider: plugin exited
+2023-11-27T22:31:49.922Z [INFO]  backend/local: plan calling Plan
+2023-11-27T22:31:49.922Z [DEBUG] Building and walking plan graph for NormalMode
+2023-11-27T22:31:49.923Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (orphan)" (*terraform.NodePlannableResourceInstanceOrphan) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:31:49.923Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02 (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:31:49.923Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02 (expand)" references: []
+2023-11-27T22:31:49.923Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T22:31:49.923Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T22:31:49.923Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T22:31:49.923Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (orphan)" references: []
+2023-11-27T22:31:49.923Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_id var.proxmox_api_url var.proxmox_api_token_secret]
+2023-11-27T22:31:49.924Z [DEBUG] Starting graph walk: walkPlan
+2023-11-27T22:31:49.924Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:31:49.924Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:31:49.934Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:31:49.934Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12309
+2023-11-27T22:31:49.934Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:31:49.941Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:31:49.941Z
+2023-11-27T22:31:49.981Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:31:49.981Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin828007117 network=unix timestamp=2023-11-27T22:31:49.981Z
+2023-11-27T22:31:50.009Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/telmate/proxmox\"]" changed the config value, but that value is unused
+2023-11-27T22:31:50.028Z [DEBUG] Resource instance state not found for node "proxmox_vm_qemu.testing02", instance proxmox_vm_qemu.testing02
+2023-11-27T22:31:50.029Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02" references: []
+2023-11-27T22:31:50.029Z [DEBUG] refresh: proxmox_vm_qemu.testing02: no state, so not refreshing
+2023-11-27T22:31:50.046Z [ERROR] provider.terraform-provider-proxmox_v2.9.14: Response contains error diagnostic: diagnostic_severity=ERROR diagnostic_summary="vm '133' not found" @caller=github.com/hashicorp/terraform-plugin-go@v0.14.3/tfprotov5/internal/diag/diagnostics.go:55 @module=sdk.proto tf_provider_addr=registry.terraform.io/telmate/proxmox tf_resource_type=proxmox_lxc diagnostic_detail="" tf_req_id=dac66adb-2ead-467b-2f6d-40f50ebdc640 tf_proto_version=5.3 tf_rpc=ReadResource timestamp=2023-11-27T22:31:50.046Z
+2023-11-27T22:31:50.047Z [ERROR] vertex "proxmox_lxc.basic (orphan)" error: vm '133' not found
+2023-11-27T22:31:50.047Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an invalid plan for proxmox_vm_qemu.testing02, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .clone_wait: planned value cty.NumberIntVal(10) for a non-computed attribute
+      - .automatic_reboot: planned value cty.True for a non-computed attribute
+      - .define_connection_info: planned value cty.True for a non-computed attribute
+      - .guest_agent_ready_timeout: planned value cty.NumberIntVal(100) for a non-computed attribute
+      - .preprovision: planned value cty.True for a non-computed attribute
+      - .hotplug: planned value cty.StringVal("network,disk,usb") for a non-computed attribute
+      - .oncreate: planned value cty.True for a non-computed attribute
+      - .kvm: planned value cty.True for a non-computed attribute
+      - .vlan: planned value cty.NumberIntVal(-1) for a non-computed attribute
+      - .force_create: planned value cty.False for a non-computed attribute
+      - .bios: planned value cty.StringVal("seabios") for a non-computed attribute
+      - .scsihw: planned value cty.StringVal("lsi") for a non-computed attribute
+      - .vcpus: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .balloon: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .additional_wait: planned value cty.NumberIntVal(5) for a non-computed attribute
+      - .full_clone: planned value cty.True for a non-computed attribute
+      - .tablet: planned value cty.True for a non-computed attribute
+      - .disk[0].mbps_wr_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].replicate: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iothread: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].ssd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].cache: planned value cty.StringVal("none") for a non-computed attribute
+      - .disk[0].iops: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_rd_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].backup: planned value cty.True for a non-computed attribute
+      - .disk[0].iops_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_rd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_wr: planned value cty.NumberIntVal(0) for a non-computed attribute
+2023-11-27T22:31:50.049Z [INFO]  backend/local: plan operation completed
+2023-11-27T22:31:50.054Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:31:50.056Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12309
+2023-11-27T22:31:50.056Z [DEBUG] provider: plugin exited
+2023-11-27T22:32:24.509Z [INFO]  Terraform version: 1.6.4
+2023-11-27T22:32:24.510Z [DEBUG] using github.com/hashicorp/go-tfe v1.36.0
+2023-11-27T22:32:24.510Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.19.1
+2023-11-27T22:32:24.510Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2023-11-27T22:32:24.510Z [DEBUG] using github.com/zclconf/go-cty v1.14.1
+2023-11-27T22:32:24.510Z [INFO]  Go runtime version: go1.21.3
+2023-11-27T22:32:24.510Z [INFO]  CLI args: []string{"terraform", "plan"}
+2023-11-27T22:32:24.510Z [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2023-11-27T22:32:24.510Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-11-27T22:32:24.510Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-11-27T22:32:24.510Z [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2023-11-27T22:32:24.510Z [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2023-11-27T22:32:24.510Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2023-11-27T22:32:24.510Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2023-11-27T22:32:24.510Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2023-11-27T22:32:24.510Z [INFO]  CLI command args: []string{"plan"}
+2023-11-27T22:32:24.512Z [DEBUG] New state was assigned lineage "3c5f93df-b9f6-0735-e750-b38b56636a5b"
+2023-11-27T22:32:24.635Z [DEBUG] checking for provisioner in "."
+2023-11-27T22:32:24.639Z [DEBUG] checking for provisioner in "/usr/bin"
+2023-11-27T22:32:24.642Z [INFO]  backend/local: starting Plan operation
+2023-11-27T22:32:24.645Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:32:24.645Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:32:24.676Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:32:24.677Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12349
+2023-11-27T22:32:24.677Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:32:24.684Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:32:24.684Z
+2023-11-27T22:32:24.724Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin3217442036 network=unix timestamp=2023-11-27T22:32:24.724Z
+2023-11-27T22:32:24.724Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:32:24.750Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:32:24.752Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12349
+2023-11-27T22:32:24.752Z [DEBUG] provider: plugin exited
+2023-11-27T22:32:24.752Z [DEBUG] Building and walking validate graph
+2023-11-27T22:32:24.752Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:32:24.752Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T22:32:24.753Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_id var.proxmox_api_token_secret var.proxmox_api_url]
+2023-11-27T22:32:24.753Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02" references: []
+2023-11-27T22:32:24.753Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T22:32:24.753Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T22:32:24.753Z [DEBUG] Starting graph walk: walkValidate
+2023-11-27T22:32:24.754Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:32:24.754Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:32:24.763Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:32:24.764Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12356
+2023-11-27T22:32:24.764Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:32:24.771Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:32:24.770Z
+2023-11-27T22:32:24.810Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin3520690412 network=unix timestamp=2023-11-27T22:32:24.809Z
+2023-11-27T22:32:24.810Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:32:24.844Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:32:24.846Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12356
+2023-11-27T22:32:24.846Z [DEBUG] provider: plugin exited
+2023-11-27T22:32:24.846Z [INFO]  backend/local: plan calling Plan
+2023-11-27T22:32:24.846Z [DEBUG] Building and walking plan graph for NormalMode
+2023-11-27T22:32:24.846Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02 (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:32:24.846Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (orphan)" (*terraform.NodePlannableResourceInstanceOrphan) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:32:24.846Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T22:32:24.846Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (orphan)" references: []
+2023-11-27T22:32:24.847Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_secret var.proxmox_api_token_id var.proxmox_api_url]
+2023-11-27T22:32:24.847Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02 (expand)" references: []
+2023-11-27T22:32:24.847Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T22:32:24.847Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T22:32:24.847Z [DEBUG] Starting graph walk: walkPlan
+2023-11-27T22:32:24.848Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:32:24.848Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:32:24.857Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:32:24.858Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12364
+2023-11-27T22:32:24.858Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:32:24.865Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:32:24.865Z
+2023-11-27T22:32:24.905Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin3554432352 network=unix timestamp=2023-11-27T22:32:24.905Z
+2023-11-27T22:32:24.905Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:32:24.933Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/telmate/proxmox\"]" changed the config value, but that value is unused
+2023-11-27T22:32:24.953Z [DEBUG] Resource instance state not found for node "proxmox_vm_qemu.testing02", instance proxmox_vm_qemu.testing02
+2023-11-27T22:32:24.953Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02" references: []
+2023-11-27T22:32:24.954Z [DEBUG] refresh: proxmox_vm_qemu.testing02: no state, so not refreshing
+2023-11-27T22:32:24.975Z [ERROR] provider.terraform-provider-proxmox_v2.9.14: Response contains error diagnostic: diagnostic_severity=ERROR tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/telmate/proxmox tf_resource_type=proxmox_lxc @caller=github.com/hashicorp/terraform-plugin-go@v0.14.3/tfprotov5/internal/diag/diagnostics.go:55 diagnostic_detail="" diagnostic_summary="vm '133' not found" tf_req_id=ec0b76e8-1670-b71c-91fd-1ca95d5afe2c tf_rpc=ReadResource @module=sdk.proto timestamp=2023-11-27T22:32:24.974Z
+2023-11-27T22:32:24.975Z [ERROR] vertex "proxmox_lxc.basic (orphan)" error: vm '133' not found
+2023-11-27T22:32:24.977Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an invalid plan for proxmox_vm_qemu.testing02, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .automatic_reboot: planned value cty.True for a non-computed attribute
+      - .hotplug: planned value cty.StringVal("network,disk,usb") for a non-computed attribute
+      - .preprovision: planned value cty.True for a non-computed attribute
+      - .bios: planned value cty.StringVal("seabios") for a non-computed attribute
+      - .clone_wait: planned value cty.NumberIntVal(10) for a non-computed attribute
+      - .vcpus: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .kvm: planned value cty.True for a non-computed attribute
+      - .force_create: planned value cty.False for a non-computed attribute
+      - .oncreate: planned value cty.True for a non-computed attribute
+      - .balloon: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .vlan: planned value cty.NumberIntVal(-1) for a non-computed attribute
+      - .additional_wait: planned value cty.NumberIntVal(5) for a non-computed attribute
+      - .guest_agent_ready_timeout: planned value cty.NumberIntVal(100) for a non-computed attribute
+      - .tablet: planned value cty.True for a non-computed attribute
+      - .full_clone: planned value cty.True for a non-computed attribute
+      - .scsihw: planned value cty.StringVal("lsi") for a non-computed attribute
+      - .define_connection_info: planned value cty.True for a non-computed attribute
+      - .disk[0].replicate: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].cache: planned value cty.StringVal("none") for a non-computed attribute
+      - .disk[0].iops_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].backup: planned value cty.True for a non-computed attribute
+      - .disk[0].iops_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_wr: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_wr_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_rd_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iothread: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_rd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].ssd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops: planned value cty.NumberIntVal(0) for a non-computed attribute
+2023-11-27T22:32:24.978Z [INFO]  backend/local: plan operation completed
+2023-11-27T22:32:24.983Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:32:24.985Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12364
+2023-11-27T22:32:24.985Z [DEBUG] provider: plugin exited
+2023-11-27T22:32:41.275Z [INFO]  Terraform version: 1.6.4
+2023-11-27T22:32:41.275Z [DEBUG] using github.com/hashicorp/go-tfe v1.36.0
+2023-11-27T22:32:41.275Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.19.1
+2023-11-27T22:32:41.275Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2023-11-27T22:32:41.275Z [DEBUG] using github.com/zclconf/go-cty v1.14.1
+2023-11-27T22:32:41.275Z [INFO]  Go runtime version: go1.21.3
+2023-11-27T22:32:41.275Z [INFO]  CLI args: []string{"terraform", "plan"}
+2023-11-27T22:32:41.275Z [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2023-11-27T22:32:41.275Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-11-27T22:32:41.275Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-11-27T22:32:41.275Z [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2023-11-27T22:32:41.275Z [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2023-11-27T22:32:41.275Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2023-11-27T22:32:41.275Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2023-11-27T22:32:41.275Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2023-11-27T22:32:41.276Z [INFO]  CLI command args: []string{"plan"}
+2023-11-27T22:32:41.278Z [DEBUG] New state was assigned lineage "0c0b40c9-aa40-63b0-7c68-d49f001b7999"
+2023-11-27T22:32:41.401Z [DEBUG] checking for provisioner in "."
+2023-11-27T22:32:41.405Z [DEBUG] checking for provisioner in "/usr/bin"
+2023-11-27T22:32:41.406Z [INFO]  backend/local: starting Plan operation
+2023-11-27T22:32:41.408Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:32:41.408Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:32:41.431Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:32:41.431Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12379
+2023-11-27T22:32:41.431Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:32:41.439Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:32:41.439Z
+2023-11-27T22:32:41.478Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin11348596 network=unix timestamp=2023-11-27T22:32:41.478Z
+2023-11-27T22:32:41.478Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:32:41.505Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:32:41.506Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12379
+2023-11-27T22:32:41.506Z [DEBUG] provider: plugin exited
+2023-11-27T22:32:41.506Z [DEBUG] Building and walking validate graph
+2023-11-27T22:32:41.506Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:32:41.507Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T22:32:41.507Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_secret var.proxmox_api_url var.proxmox_api_token_id]
+2023-11-27T22:32:41.507Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02" references: []
+2023-11-27T22:32:41.507Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T22:32:41.507Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T22:32:41.508Z [DEBUG] Starting graph walk: walkValidate
+2023-11-27T22:32:41.508Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:32:41.508Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:32:41.517Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:32:41.518Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12386
+2023-11-27T22:32:41.518Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:32:41.525Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:32:41.525Z
+2023-11-27T22:32:41.564Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin200395272 network=unix timestamp=2023-11-27T22:32:41.564Z
+2023-11-27T22:32:41.564Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:32:41.600Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:32:41.602Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12386
+2023-11-27T22:32:41.602Z [DEBUG] provider: plugin exited
+2023-11-27T22:32:41.602Z [INFO]  backend/local: plan calling Plan
+2023-11-27T22:32:41.602Z [DEBUG] Building and walking plan graph for NormalMode
+2023-11-27T22:32:41.603Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (orphan)" (*terraform.NodePlannableResourceInstanceOrphan) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:32:41.603Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02 (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:32:41.603Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_url var.proxmox_api_token_secret var.proxmox_api_token_id]
+2023-11-27T22:32:41.604Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02 (expand)" references: []
+2023-11-27T22:32:41.604Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T22:32:41.604Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T22:32:41.604Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T22:32:41.604Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (orphan)" references: []
+2023-11-27T22:32:41.604Z [DEBUG] Starting graph walk: walkPlan
+2023-11-27T22:32:41.605Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:32:41.605Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:32:41.614Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:32:41.615Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12393
+2023-11-27T22:32:41.615Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:32:41.622Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:32:41.622Z
+2023-11-27T22:32:41.661Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:32:41.661Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin3364946548 network=unix timestamp=2023-11-27T22:32:41.661Z
+2023-11-27T22:32:41.688Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/telmate/proxmox\"]" changed the config value, but that value is unused
+2023-11-27T22:32:41.717Z [DEBUG] Resource instance state not found for node "proxmox_vm_qemu.testing02", instance proxmox_vm_qemu.testing02
+2023-11-27T22:32:41.717Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02" references: []
+2023-11-27T22:32:41.717Z [DEBUG] refresh: proxmox_vm_qemu.testing02: no state, so not refreshing
+2023-11-27T22:32:41.731Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an invalid plan for proxmox_vm_qemu.testing02, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .force_create: planned value cty.False for a non-computed attribute
+      - .preprovision: planned value cty.True for a non-computed attribute
+      - .guest_agent_ready_timeout: planned value cty.NumberIntVal(100) for a non-computed attribute
+      - .kvm: planned value cty.True for a non-computed attribute
+      - .vcpus: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .scsihw: planned value cty.StringVal("lsi") for a non-computed attribute
+      - .hotplug: planned value cty.StringVal("network,disk,usb") for a non-computed attribute
+      - .vlan: planned value cty.NumberIntVal(-1) for a non-computed attribute
+      - .full_clone: planned value cty.True for a non-computed attribute
+      - .automatic_reboot: planned value cty.True for a non-computed attribute
+      - .additional_wait: planned value cty.NumberIntVal(5) for a non-computed attribute
+      - .bios: planned value cty.StringVal("seabios") for a non-computed attribute
+      - .clone_wait: planned value cty.NumberIntVal(10) for a non-computed attribute
+      - .oncreate: planned value cty.True for a non-computed attribute
+      - .tablet: planned value cty.True for a non-computed attribute
+      - .balloon: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .define_connection_info: planned value cty.True for a non-computed attribute
+      - .disk[0].iops_wr_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].cache: planned value cty.StringVal("none") for a non-computed attribute
+      - .disk[0].iops: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].ssd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_wr_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].backup: planned value cty.True for a non-computed attribute
+      - .disk[0].iothread: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_rd_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_wr: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_rd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].replicate: planned value cty.NumberIntVal(0) for a non-computed attribute
+2023-11-27T22:32:41.738Z [ERROR] provider.terraform-provider-proxmox_v2.9.14: Response contains error diagnostic: diagnostic_severity=ERROR @caller=github.com/hashicorp/terraform-plugin-go@v0.14.3/tfprotov5/internal/diag/diagnostics.go:55 diagnostic_detail="" tf_provider_addr=registry.terraform.io/telmate/proxmox tf_rpc=ReadResource tf_resource_type=proxmox_lxc @module=sdk.proto diagnostic_summary="vm '133' not found" tf_req_id=74762a85-20b8-5c37-49c7-5cf4d26a1390 tf_proto_version=5.3 timestamp=2023-11-27T22:32:41.737Z
+2023-11-27T22:32:41.738Z [ERROR] vertex "proxmox_lxc.basic (orphan)" error: vm '133' not found
+2023-11-27T22:32:41.738Z [INFO]  backend/local: plan operation completed
+2023-11-27T22:32:41.744Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:32:41.746Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12393
+2023-11-27T22:32:41.746Z [DEBUG] provider: plugin exited
+2023-11-27T22:32:44.681Z [INFO]  Terraform version: 1.6.4
+2023-11-27T22:32:44.681Z [DEBUG] using github.com/hashicorp/go-tfe v1.36.0
+2023-11-27T22:32:44.681Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.19.1
+2023-11-27T22:32:44.681Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2023-11-27T22:32:44.681Z [DEBUG] using github.com/zclconf/go-cty v1.14.1
+2023-11-27T22:32:44.681Z [INFO]  Go runtime version: go1.21.3
+2023-11-27T22:32:44.681Z [INFO]  CLI args: []string{"terraform", "init"}
+2023-11-27T22:32:44.681Z [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2023-11-27T22:32:44.681Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-11-27T22:32:44.681Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-11-27T22:32:44.682Z [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2023-11-27T22:32:44.682Z [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2023-11-27T22:32:44.682Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2023-11-27T22:32:44.682Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2023-11-27T22:32:44.682Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2023-11-27T22:32:44.682Z [INFO]  CLI command args: []string{"init"}
+2023-11-27T22:32:44.684Z [DEBUG] New state was assigned lineage "acb20357-a6f6-e7b8-9e1e-734b5c32bae3"
+2023-11-27T22:32:44.806Z [DEBUG] checking for provisioner in "."
+2023-11-27T22:32:44.810Z [DEBUG] checking for provisioner in "/usr/bin"
+2023-11-27T22:32:44.811Z [DEBUG] Service discovery for registry.terraform.io at https://registry.terraform.io/.well-known/terraform.json
+2023-11-27T22:32:44.903Z [DEBUG] GET https://registry.terraform.io/v1/providers/telmate/proxmox/versions
+2023-11-27T22:32:46.249Z [INFO]  Terraform version: 1.6.4
+2023-11-27T22:32:46.249Z [DEBUG] using github.com/hashicorp/go-tfe v1.36.0
+2023-11-27T22:32:46.249Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.19.1
+2023-11-27T22:32:46.249Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2023-11-27T22:32:46.249Z [DEBUG] using github.com/zclconf/go-cty v1.14.1
+2023-11-27T22:32:46.249Z [INFO]  Go runtime version: go1.21.3
+2023-11-27T22:32:46.249Z [INFO]  CLI args: []string{"terraform", "plan"}
+2023-11-27T22:32:46.249Z [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2023-11-27T22:32:46.249Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-11-27T22:32:46.249Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-11-27T22:32:46.249Z [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2023-11-27T22:32:46.249Z [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2023-11-27T22:32:46.249Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2023-11-27T22:32:46.249Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2023-11-27T22:32:46.249Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2023-11-27T22:32:46.250Z [INFO]  CLI command args: []string{"plan"}
+2023-11-27T22:32:46.251Z [DEBUG] New state was assigned lineage "53769e8f-e83e-ae5a-df34-111e3f7a4843"
+2023-11-27T22:32:46.374Z [DEBUG] checking for provisioner in "."
+2023-11-27T22:32:46.377Z [DEBUG] checking for provisioner in "/usr/bin"
+2023-11-27T22:32:46.379Z [INFO]  backend/local: starting Plan operation
+2023-11-27T22:32:46.380Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:32:46.381Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:32:46.404Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:32:46.404Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12415
+2023-11-27T22:32:46.404Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:32:46.412Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:32:46.412Z
+2023-11-27T22:32:46.451Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin468155374 network=unix timestamp=2023-11-27T22:32:46.451Z
+2023-11-27T22:32:46.451Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:32:46.489Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:32:46.491Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12415
+2023-11-27T22:32:46.491Z [DEBUG] provider: plugin exited
+2023-11-27T22:32:46.491Z [DEBUG] Building and walking validate graph
+2023-11-27T22:32:46.491Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:32:46.492Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_url var.proxmox_api_token_secret var.proxmox_api_token_id]
+2023-11-27T22:32:46.492Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02" references: []
+2023-11-27T22:32:46.492Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T22:32:46.492Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T22:32:46.492Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T22:32:46.492Z [DEBUG] Starting graph walk: walkValidate
+2023-11-27T22:32:46.493Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:32:46.493Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:32:46.503Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:32:46.503Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12422
+2023-11-27T22:32:46.503Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:32:46.510Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:32:46.510Z
+2023-11-27T22:32:46.550Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:32:46.550Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin3293427486 network=unix timestamp=2023-11-27T22:32:46.549Z
+2023-11-27T22:32:46.583Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:32:46.584Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12422
+2023-11-27T22:32:46.584Z [DEBUG] provider: plugin exited
+2023-11-27T22:32:46.584Z [INFO]  backend/local: plan calling Plan
+2023-11-27T22:32:46.584Z [DEBUG] Building and walking plan graph for NormalMode
+2023-11-27T22:32:46.585Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02 (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:32:46.585Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (orphan)" (*terraform.NodePlannableResourceInstanceOrphan) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:32:46.585Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (orphan)" references: []
+2023-11-27T22:32:46.585Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_secret var.proxmox_api_url var.proxmox_api_token_id]
+2023-11-27T22:32:46.585Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02 (expand)" references: []
+2023-11-27T22:32:46.585Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T22:32:46.585Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T22:32:46.585Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T22:32:46.586Z [DEBUG] Starting graph walk: walkPlan
+2023-11-27T22:32:46.586Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:32:46.586Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:32:46.595Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:32:46.596Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12430
+2023-11-27T22:32:46.596Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:32:46.603Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:32:46.603Z
+2023-11-27T22:32:46.642Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin427676181 network=unix timestamp=2023-11-27T22:32:46.642Z
+2023-11-27T22:32:46.642Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:32:46.668Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/telmate/proxmox\"]" changed the config value, but that value is unused
+2023-11-27T22:32:46.686Z [DEBUG] Resource instance state not found for node "proxmox_vm_qemu.testing02", instance proxmox_vm_qemu.testing02
+2023-11-27T22:32:46.686Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02" references: []
+2023-11-27T22:32:46.687Z [DEBUG] refresh: proxmox_vm_qemu.testing02: no state, so not refreshing
+2023-11-27T22:32:46.701Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an invalid plan for proxmox_vm_qemu.testing02, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .bios: planned value cty.StringVal("seabios") for a non-computed attribute
+      - .vcpus: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .hotplug: planned value cty.StringVal("network,disk,usb") for a non-computed attribute
+      - .clone_wait: planned value cty.NumberIntVal(10) for a non-computed attribute
+      - .kvm: planned value cty.True for a non-computed attribute
+      - .vlan: planned value cty.NumberIntVal(-1) for a non-computed attribute
+      - .define_connection_info: planned value cty.True for a non-computed attribute
+      - .full_clone: planned value cty.True for a non-computed attribute
+      - .scsihw: planned value cty.StringVal("lsi") for a non-computed attribute
+      - .tablet: planned value cty.True for a non-computed attribute
+      - .preprovision: planned value cty.True for a non-computed attribute
+      - .force_create: planned value cty.False for a non-computed attribute
+      - .automatic_reboot: planned value cty.True for a non-computed attribute
+      - .additional_wait: planned value cty.NumberIntVal(5) for a non-computed attribute
+      - .guest_agent_ready_timeout: planned value cty.NumberIntVal(100) for a non-computed attribute
+      - .oncreate: planned value cty.True for a non-computed attribute
+      - .balloon: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iothread: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].replicate: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].ssd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_wr: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_rd_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].backup: planned value cty.True for a non-computed attribute
+      - .disk[0].iops_rd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_wr_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].cache: planned value cty.StringVal("none") for a non-computed attribute
+      - .disk[0].mbps_rd: planned value cty.NumberIntVal(0) for a non-computed attribute
+2023-11-27T22:32:46.724Z [ERROR] provider.terraform-provider-proxmox_v2.9.14: Response contains error diagnostic: @caller=github.com/hashicorp/terraform-plugin-go@v0.14.3/tfprotov5/internal/diag/diagnostics.go:55 tf_req_id=3ccb7b41-ba04-0dd8-78a8-f4d2075ec3ac diagnostic_summary="vm '133' not found" tf_resource_type=proxmox_lxc tf_rpc=ReadResource @module=sdk.proto diagnostic_severity=ERROR diagnostic_detail="" tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/telmate/proxmox timestamp=2023-11-27T22:32:46.724Z
+2023-11-27T22:32:46.724Z [ERROR] vertex "proxmox_lxc.basic (orphan)" error: vm '133' not found
+2023-11-27T22:32:46.724Z [INFO]  backend/local: plan operation completed
+2023-11-27T22:32:46.730Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:32:46.732Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12430
+2023-11-27T22:32:46.732Z [DEBUG] provider: plugin exited
+2023-11-27T22:33:17.770Z [INFO]  Terraform version: 1.6.4
+2023-11-27T22:33:17.770Z [DEBUG] using github.com/hashicorp/go-tfe v1.36.0
+2023-11-27T22:33:17.770Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.19.1
+2023-11-27T22:33:17.770Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2023-11-27T22:33:17.770Z [DEBUG] using github.com/zclconf/go-cty v1.14.1
+2023-11-27T22:33:17.770Z [INFO]  Go runtime version: go1.21.3
+2023-11-27T22:33:17.770Z [INFO]  CLI args: []string{"terraform", "plan"}
+2023-11-27T22:33:17.770Z [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2023-11-27T22:33:17.770Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-11-27T22:33:17.770Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-11-27T22:33:17.770Z [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2023-11-27T22:33:17.770Z [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2023-11-27T22:33:17.770Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2023-11-27T22:33:17.770Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2023-11-27T22:33:17.770Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2023-11-27T22:33:17.771Z [INFO]  CLI command args: []string{"plan"}
+2023-11-27T22:33:17.772Z [DEBUG] New state was assigned lineage "5e593637-4b6f-c17c-6402-33c9431a0d44"
+2023-11-27T22:33:17.893Z [DEBUG] checking for provisioner in "."
+2023-11-27T22:33:17.897Z [DEBUG] checking for provisioner in "/usr/bin"
+2023-11-27T22:33:17.898Z [INFO]  backend/local: starting Plan operation
+2023-11-27T22:33:17.900Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:33:17.900Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:33:17.923Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:33:17.924Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12480
+2023-11-27T22:33:17.924Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:33:17.931Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:33:17.931Z
+2023-11-27T22:33:17.971Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin2609029677 network=unix timestamp=2023-11-27T22:33:17.971Z
+2023-11-27T22:33:17.971Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:33:18.004Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:33:18.006Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12480
+2023-11-27T22:33:18.006Z [DEBUG] provider: plugin exited
+2023-11-27T22:33:18.006Z [DEBUG] Building and walking validate graph
+2023-11-27T22:33:18.006Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:33:18.007Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_id var.proxmox_api_url var.proxmox_api_token_secret]
+2023-11-27T22:33:18.007Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02" references: []
+2023-11-27T22:33:18.007Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T22:33:18.007Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T22:33:18.007Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T22:33:18.007Z [DEBUG] Starting graph walk: walkValidate
+2023-11-27T22:33:18.008Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:33:18.008Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:33:18.017Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:33:18.018Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12487
+2023-11-27T22:33:18.018Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:33:18.025Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:33:18.025Z
+2023-11-27T22:33:18.065Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin2184947553 network=unix timestamp=2023-11-27T22:33:18.064Z
+2023-11-27T22:33:18.065Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:33:18.098Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:33:18.099Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12487
+2023-11-27T22:33:18.099Z [DEBUG] provider: plugin exited
+2023-11-27T22:33:18.099Z [INFO]  backend/local: plan calling Plan
+2023-11-27T22:33:18.099Z [DEBUG] Building and walking plan graph for NormalMode
+2023-11-27T22:33:18.100Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (orphan)" (*terraform.NodePlannableResourceInstanceOrphan) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:33:18.100Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02 (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:33:18.100Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02 (expand)" references: []
+2023-11-27T22:33:18.100Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T22:33:18.100Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T22:33:18.100Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T22:33:18.100Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (orphan)" references: []
+2023-11-27T22:33:18.100Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_secret var.proxmox_api_token_id var.proxmox_api_url]
+2023-11-27T22:33:18.101Z [DEBUG] Starting graph walk: walkPlan
+2023-11-27T22:33:18.101Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:33:18.101Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:33:18.111Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:33:18.111Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12495
+2023-11-27T22:33:18.111Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:33:18.118Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:33:18.118Z
+2023-11-27T22:33:18.158Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:33:18.159Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin3848103678 network=unix timestamp=2023-11-27T22:33:18.158Z
+2023-11-27T22:33:18.190Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/telmate/proxmox\"]" changed the config value, but that value is unused
+2023-11-27T22:33:18.212Z [DEBUG] Resource instance state not found for node "proxmox_vm_qemu.testing02", instance proxmox_vm_qemu.testing02
+2023-11-27T22:33:18.213Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02" references: []
+2023-11-27T22:33:18.213Z [DEBUG] refresh: proxmox_vm_qemu.testing02: no state, so not refreshing
+2023-11-27T22:33:18.233Z [ERROR] provider.terraform-provider-proxmox_v2.9.14: Response contains error diagnostic: tf_resource_type=proxmox_lxc diagnostic_detail="" diagnostic_severity=ERROR tf_rpc=ReadResource @caller=github.com/hashicorp/terraform-plugin-go@v0.14.3/tfprotov5/internal/diag/diagnostics.go:55 diagnostic_summary="vm '133' not found" tf_provider_addr=registry.terraform.io/telmate/proxmox tf_req_id=b911ae48-5e99-8518-3f55-02d734bc441f @module=sdk.proto tf_proto_version=5.3 timestamp=2023-11-27T22:33:18.233Z
+2023-11-27T22:33:18.234Z [ERROR] vertex "proxmox_lxc.basic (orphan)" error: vm '133' not found
+2023-11-27T22:33:18.234Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an invalid plan for proxmox_vm_qemu.testing02, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .vlan: planned value cty.NumberIntVal(-1) for a non-computed attribute
+      - .hotplug: planned value cty.StringVal("network,disk,usb") for a non-computed attribute
+      - .oncreate: planned value cty.True for a non-computed attribute
+      - .additional_wait: planned value cty.NumberIntVal(5) for a non-computed attribute
+      - .automatic_reboot: planned value cty.True for a non-computed attribute
+      - .preprovision: planned value cty.True for a non-computed attribute
+      - .force_create: planned value cty.False for a non-computed attribute
+      - .vcpus: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .balloon: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .define_connection_info: planned value cty.True for a non-computed attribute
+      - .tablet: planned value cty.True for a non-computed attribute
+      - .clone_wait: planned value cty.NumberIntVal(10) for a non-computed attribute
+      - .scsihw: planned value cty.StringVal("lsi") for a non-computed attribute
+      - .full_clone: planned value cty.True for a non-computed attribute
+      - .kvm: planned value cty.True for a non-computed attribute
+      - .bios: planned value cty.StringVal("seabios") for a non-computed attribute
+      - .guest_agent_ready_timeout: planned value cty.NumberIntVal(100) for a non-computed attribute
+      - .disk[0].iops_rd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_rd_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].backup: planned value cty.True for a non-computed attribute
+      - .disk[0].iops_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_wr: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].replicate: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].cache: planned value cty.StringVal("none") for a non-computed attribute
+      - .disk[0].iothread: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_rd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_wr_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].ssd: planned value cty.NumberIntVal(0) for a non-computed attribute
+2023-11-27T22:33:18.236Z [INFO]  backend/local: plan operation completed
+2023-11-27T22:33:18.240Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:33:18.242Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12495
+2023-11-27T22:33:18.242Z [DEBUG] provider: plugin exited
+2023-11-27T22:33:47.942Z [INFO]  Terraform version: 1.6.4
+2023-11-27T22:33:47.942Z [DEBUG] using github.com/hashicorp/go-tfe v1.36.0
+2023-11-27T22:33:47.942Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.19.1
+2023-11-27T22:33:47.942Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2023-11-27T22:33:47.942Z [DEBUG] using github.com/zclconf/go-cty v1.14.1
+2023-11-27T22:33:47.942Z [INFO]  Go runtime version: go1.21.3
+2023-11-27T22:33:47.942Z [INFO]  CLI args: []string{"terraform", "plan"}
+2023-11-27T22:33:47.942Z [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2023-11-27T22:33:47.942Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-11-27T22:33:47.942Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-11-27T22:33:47.942Z [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2023-11-27T22:33:47.942Z [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2023-11-27T22:33:47.942Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2023-11-27T22:33:47.942Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2023-11-27T22:33:47.942Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2023-11-27T22:33:47.943Z [INFO]  CLI command args: []string{"plan"}
+2023-11-27T22:33:47.945Z [DEBUG] New state was assigned lineage "ca151150-d1b0-ec80-7ab1-f2f6d836fbe2"
+2023-11-27T22:33:48.071Z [DEBUG] checking for provisioner in "."
+2023-11-27T22:33:48.075Z [DEBUG] checking for provisioner in "/usr/bin"
+2023-11-27T22:33:48.076Z [INFO]  backend/local: starting Plan operation
+2023-11-27T22:33:48.078Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:33:48.078Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:33:48.101Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:33:48.102Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12536
+2023-11-27T22:33:48.102Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:33:48.109Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:33:48.108Z
+2023-11-27T22:33:48.149Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin1260985004 network=unix timestamp=2023-11-27T22:33:48.149Z
+2023-11-27T22:33:48.149Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:33:48.176Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:33:48.177Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12536
+2023-11-27T22:33:48.177Z [DEBUG] provider: plugin exited
+2023-11-27T22:33:48.177Z [DEBUG] Building and walking validate graph
+2023-11-27T22:33:48.178Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:33:48.178Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02" references: []
+2023-11-27T22:33:48.178Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T22:33:48.178Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T22:33:48.178Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T22:33:48.178Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_url var.proxmox_api_token_secret var.proxmox_api_token_id]
+2023-11-27T22:33:48.179Z [DEBUG] Starting graph walk: walkValidate
+2023-11-27T22:33:48.179Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:33:48.179Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:33:48.189Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:33:48.189Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12543
+2023-11-27T22:33:48.189Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:33:48.196Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:33:48.196Z
+2023-11-27T22:33:48.236Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin3488121470 network=unix timestamp=2023-11-27T22:33:48.236Z
+2023-11-27T22:33:48.236Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:33:48.275Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:33:48.276Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12543
+2023-11-27T22:33:48.276Z [DEBUG] provider: plugin exited
+2023-11-27T22:33:48.276Z [INFO]  backend/local: plan calling Plan
+2023-11-27T22:33:48.276Z [DEBUG] Building and walking plan graph for NormalMode
+2023-11-27T22:33:48.277Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02 (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:33:48.277Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T22:33:48.277Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_url var.proxmox_api_token_id var.proxmox_api_token_secret]
+2023-11-27T22:33:48.277Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02 (expand)" references: []
+2023-11-27T22:33:48.277Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T22:33:48.277Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T22:33:48.278Z [DEBUG] Starting graph walk: walkPlan
+2023-11-27T22:33:48.278Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:33:48.278Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:33:48.288Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:33:48.290Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12550
+2023-11-27T22:33:48.290Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:33:48.296Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:33:48.296Z
+2023-11-27T22:33:48.335Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin3925268048 network=unix timestamp=2023-11-27T22:33:48.335Z
+2023-11-27T22:33:48.336Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:33:48.362Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/telmate/proxmox\"]" changed the config value, but that value is unused
+2023-11-27T22:33:48.380Z [DEBUG] Resource instance state not found for node "proxmox_vm_qemu.testing02", instance proxmox_vm_qemu.testing02
+2023-11-27T22:33:48.380Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02" references: []
+2023-11-27T22:33:48.381Z [DEBUG] refresh: proxmox_vm_qemu.testing02: no state, so not refreshing
+2023-11-27T22:33:48.392Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an invalid plan for proxmox_vm_qemu.testing02, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .clone_wait: planned value cty.NumberIntVal(10) for a non-computed attribute
+      - .force_create: planned value cty.False for a non-computed attribute
+      - .additional_wait: planned value cty.NumberIntVal(5) for a non-computed attribute
+      - .hotplug: planned value cty.StringVal("network,disk,usb") for a non-computed attribute
+      - .bios: planned value cty.StringVal("seabios") for a non-computed attribute
+      - .vlan: planned value cty.NumberIntVal(-1) for a non-computed attribute
+      - .balloon: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .scsihw: planned value cty.StringVal("lsi") for a non-computed attribute
+      - .vcpus: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .automatic_reboot: planned value cty.True for a non-computed attribute
+      - .full_clone: planned value cty.True for a non-computed attribute
+      - .tablet: planned value cty.True for a non-computed attribute
+      - .guest_agent_ready_timeout: planned value cty.NumberIntVal(100) for a non-computed attribute
+      - .preprovision: planned value cty.True for a non-computed attribute
+      - .kvm: planned value cty.True for a non-computed attribute
+      - .define_connection_info: planned value cty.True for a non-computed attribute
+      - .oncreate: planned value cty.True for a non-computed attribute
+      - .disk[0].mbps_wr_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].replicate: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_rd_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iothread: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].backup: planned value cty.True for a non-computed attribute
+      - .disk[0].iops_wr_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].cache: planned value cty.StringVal("none") for a non-computed attribute
+      - .disk[0].mbps_rd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_wr: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].ssd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd: planned value cty.NumberIntVal(0) for a non-computed attribute
+2023-11-27T22:33:48.394Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:33:48.396Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12550
+2023-11-27T22:33:48.396Z [DEBUG] provider: plugin exited
+2023-11-27T22:33:48.396Z [DEBUG] building apply graph to check for errors
+2023-11-27T22:33:48.396Z [DEBUG] Resource state not found for node "proxmox_vm_qemu.testing02", instance proxmox_vm_qemu.testing02
+2023-11-27T22:33:48.396Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02 (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:33:48.396Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:33:48.397Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T22:33:48.397Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T22:33:48.397Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02" references: []
+2023-11-27T22:33:48.397Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_id var.proxmox_api_token_secret var.proxmox_api_url]
+2023-11-27T22:33:48.397Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02 (expand)" references: []
+2023-11-27T22:33:48.397Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T22:33:48.398Z [INFO]  backend/local: plan operation completed
+2023-11-27T22:33:52.637Z [INFO]  Terraform version: 1.6.4
+2023-11-27T22:33:52.637Z [DEBUG] using github.com/hashicorp/go-tfe v1.36.0
+2023-11-27T22:33:52.637Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.19.1
+2023-11-27T22:33:52.637Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2023-11-27T22:33:52.637Z [DEBUG] using github.com/zclconf/go-cty v1.14.1
+2023-11-27T22:33:52.637Z [INFO]  Go runtime version: go1.21.3
+2023-11-27T22:33:52.637Z [INFO]  CLI args: []string{"terraform", "apply"}
+2023-11-27T22:33:52.637Z [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2023-11-27T22:33:52.637Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-11-27T22:33:52.637Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-11-27T22:33:52.637Z [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2023-11-27T22:33:52.637Z [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2023-11-27T22:33:52.637Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2023-11-27T22:33:52.637Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2023-11-27T22:33:52.637Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2023-11-27T22:33:52.638Z [INFO]  CLI command args: []string{"apply"}
+2023-11-27T22:33:52.639Z [DEBUG] New state was assigned lineage "8c13919d-ef7d-bec0-74d5-d8ae6c51e038"
+2023-11-27T22:33:52.761Z [DEBUG] checking for provisioner in "."
+2023-11-27T22:33:52.765Z [DEBUG] checking for provisioner in "/usr/bin"
+2023-11-27T22:33:52.766Z [INFO]  backend/local: starting Apply operation
+2023-11-27T22:33:52.767Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:33:52.767Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:33:52.790Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:33:52.790Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12565
+2023-11-27T22:33:52.790Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:33:52.797Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:33:52.797Z
+2023-11-27T22:33:52.837Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin4162437044 network=unix timestamp=2023-11-27T22:33:52.837Z
+2023-11-27T22:33:52.837Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:33:52.864Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:33:52.865Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12565
+2023-11-27T22:33:52.865Z [DEBUG] provider: plugin exited
+2023-11-27T22:33:52.865Z [DEBUG] Building and walking validate graph
+2023-11-27T22:33:52.865Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:33:52.866Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02" references: []
+2023-11-27T22:33:52.866Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T22:33:52.866Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T22:33:52.866Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T22:33:52.866Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_url var.proxmox_api_token_id var.proxmox_api_token_secret]
+2023-11-27T22:33:52.866Z [DEBUG] Starting graph walk: walkValidate
+2023-11-27T22:33:52.867Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:33:52.867Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:33:52.876Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:33:52.876Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12572
+2023-11-27T22:33:52.876Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:33:52.883Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:33:52.883Z
+2023-11-27T22:33:52.923Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin3067197765 network=unix timestamp=2023-11-27T22:33:52.923Z
+2023-11-27T22:33:52.923Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:33:52.964Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:33:52.965Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12572
+2023-11-27T22:33:52.965Z [DEBUG] provider: plugin exited
+2023-11-27T22:33:52.965Z [INFO]  backend/local: apply calling Plan
+2023-11-27T22:33:52.965Z [DEBUG] Building and walking plan graph for NormalMode
+2023-11-27T22:33:52.965Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02 (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:33:52.966Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02 (expand)" references: []
+2023-11-27T22:33:52.966Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T22:33:52.966Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T22:33:52.966Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T22:33:52.966Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_id var.proxmox_api_url var.proxmox_api_token_secret]
+2023-11-27T22:33:52.966Z [DEBUG] Starting graph walk: walkPlan
+2023-11-27T22:33:52.967Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:33:52.967Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:33:52.976Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:33:52.976Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12580
+2023-11-27T22:33:52.976Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:33:52.984Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:33:52.984Z
+2023-11-27T22:33:53.023Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:33:53.023Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin1323382413 network=unix timestamp=2023-11-27T22:33:53.023Z
+2023-11-27T22:33:53.049Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/telmate/proxmox\"]" changed the config value, but that value is unused
+2023-11-27T22:33:53.068Z [DEBUG] Resource instance state not found for node "proxmox_vm_qemu.testing02", instance proxmox_vm_qemu.testing02
+2023-11-27T22:33:53.068Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02" references: []
+2023-11-27T22:33:53.069Z [DEBUG] refresh: proxmox_vm_qemu.testing02: no state, so not refreshing
+2023-11-27T22:33:53.080Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an invalid plan for proxmox_vm_qemu.testing02, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .scsihw: planned value cty.StringVal("lsi") for a non-computed attribute
+      - .kvm: planned value cty.True for a non-computed attribute
+      - .automatic_reboot: planned value cty.True for a non-computed attribute
+      - .preprovision: planned value cty.True for a non-computed attribute
+      - .force_create: planned value cty.False for a non-computed attribute
+      - .bios: planned value cty.StringVal("seabios") for a non-computed attribute
+      - .guest_agent_ready_timeout: planned value cty.NumberIntVal(100) for a non-computed attribute
+      - .tablet: planned value cty.True for a non-computed attribute
+      - .vcpus: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .clone_wait: planned value cty.NumberIntVal(10) for a non-computed attribute
+      - .hotplug: planned value cty.StringVal("network,disk,usb") for a non-computed attribute
+      - .additional_wait: planned value cty.NumberIntVal(5) for a non-computed attribute
+      - .vlan: planned value cty.NumberIntVal(-1) for a non-computed attribute
+      - .balloon: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .oncreate: planned value cty.True for a non-computed attribute
+      - .define_connection_info: planned value cty.True for a non-computed attribute
+      - .full_clone: planned value cty.True for a non-computed attribute
+      - .disk[0].backup: planned value cty.True for a non-computed attribute
+      - .disk[0].iops_wr_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_wr: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].ssd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].cache: planned value cty.StringVal("none") for a non-computed attribute
+      - .disk[0].iops_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_wr_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].replicate: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_rd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iothread: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_rd_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+2023-11-27T22:33:53.082Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:33:53.085Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12580
+2023-11-27T22:33:53.085Z [DEBUG] provider: plugin exited
+2023-11-27T22:33:53.086Z [DEBUG] building apply graph to check for errors
+2023-11-27T22:33:53.086Z [DEBUG] Resource state not found for node "proxmox_vm_qemu.testing02", instance proxmox_vm_qemu.testing02
+2023-11-27T22:33:53.086Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02 (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:33:53.086Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:33:53.086Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T22:33:53.086Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T22:33:53.086Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02" references: []
+2023-11-27T22:33:53.086Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_id var.proxmox_api_token_secret var.proxmox_api_url]
+2023-11-27T22:33:53.087Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02 (expand)" references: []
+2023-11-27T22:33:53.087Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T22:33:53.091Z [DEBUG] command: asking for input: "\nDo you want to perform these actions?"
+2023-11-27T22:33:54.841Z [INFO]  backend/local: apply calling Apply
+2023-11-27T22:33:54.841Z [DEBUG] Building and walking apply graph for NormalMode plan
+2023-11-27T22:33:54.841Z [DEBUG] Resource state not found for node "proxmox_vm_qemu.testing02", instance proxmox_vm_qemu.testing02
+2023-11-27T22:33:54.841Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02 (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:33:54.841Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T22:33:54.842Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02 (expand)" references: []
+2023-11-27T22:33:54.842Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T22:33:54.842Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T22:33:54.842Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T22:33:54.842Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02" references: []
+2023-11-27T22:33:54.842Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_url var.proxmox_api_token_secret var.proxmox_api_token_id]
+2023-11-27T22:33:54.843Z [DEBUG] Starting graph walk: walkApply
+2023-11-27T22:33:54.844Z [DEBUG] created provider logger: level=debug
+2023-11-27T22:33:54.844Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T22:33:54.854Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T22:33:54.855Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12587
+2023-11-27T22:33:54.855Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T22:33:54.862Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T22:33:54.862Z
+2023-11-27T22:33:54.901Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin115423524 network=unix timestamp=2023-11-27T22:33:54.901Z
+2023-11-27T22:33:54.901Z [DEBUG] provider: using plugin: version=5
+2023-11-27T22:33:54.929Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/telmate/proxmox\"]" changed the config value, but that value is unused
+2023-11-27T22:33:54.962Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an invalid plan for proxmox_vm_qemu.testing02, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .kvm: planned value cty.True for a non-computed attribute
+      - .preprovision: planned value cty.True for a non-computed attribute
+      - .additional_wait: planned value cty.NumberIntVal(5) for a non-computed attribute
+      - .clone_wait: planned value cty.NumberIntVal(10) for a non-computed attribute
+      - .guest_agent_ready_timeout: planned value cty.NumberIntVal(100) for a non-computed attribute
+      - .full_clone: planned value cty.True for a non-computed attribute
+      - .vcpus: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .tablet: planned value cty.True for a non-computed attribute
+      - .vlan: planned value cty.NumberIntVal(-1) for a non-computed attribute
+      - .oncreate: planned value cty.True for a non-computed attribute
+      - .bios: planned value cty.StringVal("seabios") for a non-computed attribute
+      - .force_create: planned value cty.False for a non-computed attribute
+      - .scsihw: planned value cty.StringVal("lsi") for a non-computed attribute
+      - .balloon: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .hotplug: planned value cty.StringVal("network,disk,usb") for a non-computed attribute
+      - .automatic_reboot: planned value cty.True for a non-computed attribute
+      - .define_connection_info: planned value cty.True for a non-computed attribute
+      - .disk[0].mbps: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].cache: planned value cty.StringVal("none") for a non-computed attribute
+      - .disk[0].iops: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_wr: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].backup: planned value cty.True for a non-computed attribute
+      - .disk[0].mbps_rd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iothread: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].ssd: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_rd_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].mbps_wr_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].replicate: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr_max: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_wr_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .disk[0].iops_rd_max_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+2023-11-27T22:33:54.963Z [INFO]  Starting apply for proxmox_vm_qemu.testing02
+2023-11-27T22:33:54.963Z [DEBUG] proxmox_vm_qemu.testing02: applying the planned Create change
+2023-11-27T22:33:54.970Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 22:33:54 [DEBUG] setting computed for "unused_disk" from ComputedKeys: timestamp=2023-11-27T22:33:54.970Z
+2023-11-27T22:33:54.971Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 22:33:54 [DEBUG][QemuVmCreate] checking for duplicate name: testing02: timestamp=2023-11-27T22:33:54.971Z
+2023-11-27T22:33:54.986Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 22:33:54 [DEBUG][QemuVmCreate] cloning VM: timestamp=2023-11-27T22:33:54.986Z
+2023-11-27T22:35:20.939Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 22:35:20 400 Parameter verification failed.: timestamp=2023-11-27T22:35:20.934Z
+2023-11-27T22:35:20.939Z [ERROR] provider.terraform-provider-proxmox_v2.9.14: Response contains error diagnostic: tf_proto_version=5.3 diagnostic_summary="400 Parameter verification failed." tf_req_id=621778d3-1e9a-21da-7713-93fb1d998ff2 @module=sdk.proto tf_resource_type=proxmox_vm_qemu @caller=github.com/hashicorp/terraform-plugin-go@v0.14.3/tfprotov5/internal/diag/diagnostics.go:55 tf_provider_addr=registry.terraform.io/telmate/proxmox tf_rpc=ApplyResourceChange diagnostic_detail="" diagnostic_severity=ERROR timestamp=2023-11-27T22:35:20.935Z
+2023-11-27T22:35:20.940Z [DEBUG] State storage *statemgr.Filesystem declined to persist a state snapshot
+2023-11-27T22:35:20.940Z [ERROR] vertex "proxmox_vm_qemu.testing02" error: 400 Parameter verification failed.
+2023-11-27T22:35:20.944Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T22:35:20.946Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12587
+2023-11-27T22:35:20.946Z [DEBUG] provider: plugin exited
+2023-11-27T23:23:57.352Z [INFO]  Terraform version: 1.6.4
+2023-11-27T23:23:57.352Z [DEBUG] using github.com/hashicorp/go-tfe v1.36.0
+2023-11-27T23:23:57.352Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.19.1
+2023-11-27T23:23:57.352Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2023-11-27T23:23:57.353Z [DEBUG] using github.com/zclconf/go-cty v1.14.1
+2023-11-27T23:23:57.353Z [INFO]  Go runtime version: go1.21.3
+2023-11-27T23:23:57.353Z [INFO]  CLI args: []string{"terraform", "init"}
+2023-11-27T23:23:57.353Z [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2023-11-27T23:23:57.353Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-11-27T23:23:57.353Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-11-27T23:23:57.353Z [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2023-11-27T23:23:57.353Z [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2023-11-27T23:23:57.353Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2023-11-27T23:23:57.353Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2023-11-27T23:23:57.353Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2023-11-27T23:23:57.353Z [INFO]  CLI command args: []string{"init"}
+2023-11-27T23:23:57.355Z [DEBUG] New state was assigned lineage "4721cbec-1f9e-3987-c79e-27dc73107d64"
+2023-11-27T23:23:57.480Z [DEBUG] checking for provisioner in "."
+2023-11-27T23:23:57.483Z [DEBUG] checking for provisioner in "/usr/bin"
+2023-11-27T23:23:57.485Z [DEBUG] Service discovery for registry.terraform.io at https://registry.terraform.io/.well-known/terraform.json
+2023-11-27T23:23:57.592Z [DEBUG] GET https://registry.terraform.io/v1/providers/telmate/proxmox/versions
+2023-11-27T23:24:00.826Z [INFO]  Terraform version: 1.6.4
+2023-11-27T23:24:00.826Z [DEBUG] using github.com/hashicorp/go-tfe v1.36.0
+2023-11-27T23:24:00.826Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.19.1
+2023-11-27T23:24:00.826Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2023-11-27T23:24:00.826Z [DEBUG] using github.com/zclconf/go-cty v1.14.1
+2023-11-27T23:24:00.826Z [INFO]  Go runtime version: go1.21.3
+2023-11-27T23:24:00.826Z [INFO]  CLI args: []string{"terraform", "plan"}
+2023-11-27T23:24:00.826Z [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2023-11-27T23:24:00.826Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-11-27T23:24:00.826Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-11-27T23:24:00.826Z [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2023-11-27T23:24:00.826Z [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2023-11-27T23:24:00.826Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2023-11-27T23:24:00.826Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2023-11-27T23:24:00.826Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2023-11-27T23:24:00.827Z [INFO]  CLI command args: []string{"plan"}
+2023-11-27T23:24:00.828Z [DEBUG] New state was assigned lineage "d36863e1-cb17-f855-d496-94367abe27fd"
+2023-11-27T23:24:00.952Z [DEBUG] checking for provisioner in "."
+2023-11-27T23:24:00.955Z [DEBUG] checking for provisioner in "/usr/bin"
+2023-11-27T23:24:00.956Z [INFO]  backend/local: starting Plan operation
+2023-11-27T23:24:00.959Z [DEBUG] created provider logger: level=debug
+2023-11-27T23:24:00.959Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T23:24:00.990Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T23:24:00.991Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12638
+2023-11-27T23:24:00.991Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T23:24:00.998Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T23:24:00.998Z
+2023-11-27T23:24:01.038Z [DEBUG] provider: using plugin: version=5
+2023-11-27T23:24:01.039Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin1723696824 network=unix timestamp=2023-11-27T23:24:01.038Z
+2023-11-27T23:24:01.064Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T23:24:01.065Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12638
+2023-11-27T23:24:01.065Z [DEBUG] provider: plugin exited
+2023-11-27T23:24:01.065Z [DEBUG] Building and walking validate graph
+2023-11-27T23:24:01.066Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:24:01.066Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T23:24:01.066Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T23:24:01.066Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T23:24:01.066Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T23:24:01.066Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_secret var.proxmox_api_url var.proxmox_api_token_id]
+2023-11-27T23:24:01.067Z [DEBUG] Starting graph walk: walkValidate
+2023-11-27T23:24:01.067Z [DEBUG] created provider logger: level=debug
+2023-11-27T23:24:01.067Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T23:24:01.076Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T23:24:01.076Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12645
+2023-11-27T23:24:01.076Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T23:24:01.084Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T23:24:01.083Z
+2023-11-27T23:24:01.123Z [DEBUG] provider: using plugin: version=5
+2023-11-27T23:24:01.124Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: network=unix address=/tmp/plugin3528768777 timestamp=2023-11-27T23:24:01.123Z
+2023-11-27T23:24:01.152Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T23:24:01.154Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12645
+2023-11-27T23:24:01.154Z [DEBUG] provider: plugin exited
+2023-11-27T23:24:01.154Z [INFO]  backend/local: plan calling Plan
+2023-11-27T23:24:01.154Z [DEBUG] Building and walking plan graph for NormalMode
+2023-11-27T23:24:01.155Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02 (orphan)" (*terraform.NodePlannableResourceInstanceOrphan) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:24:01.155Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:24:01.155Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T23:24:01.155Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T23:24:01.155Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T23:24:01.155Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02 (orphan)" references: []
+2023-11-27T23:24:01.155Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_url var.proxmox_api_token_secret var.proxmox_api_token_id]
+2023-11-27T23:24:01.155Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (expand)" references: []
+2023-11-27T23:24:01.156Z [DEBUG] Starting graph walk: walkPlan
+2023-11-27T23:24:01.156Z [DEBUG] created provider logger: level=debug
+2023-11-27T23:24:01.156Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T23:24:01.165Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T23:24:01.166Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12652
+2023-11-27T23:24:01.166Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T23:24:01.173Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T23:24:01.173Z
+2023-11-27T23:24:01.213Z [DEBUG] provider: using plugin: version=5
+2023-11-27T23:24:01.213Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin180231114 network=unix timestamp=2023-11-27T23:24:01.212Z
+2023-11-27T23:24:01.249Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/telmate/proxmox\"]" changed the config value, but that value is unused
+2023-11-27T23:24:01.275Z [DEBUG] Resource instance state not found for node "proxmox_lxc.basic", instance proxmox_lxc.basic
+2023-11-27T23:24:01.275Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T23:24:01.275Z [DEBUG] refresh: proxmox_lxc.basic: no state, so not refreshing
+2023-11-27T23:24:01.282Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an invalid plan for proxmox_lxc.basic, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .cmode: planned value cty.StringVal("tty") for a non-computed attribute
+      - .memory: planned value cty.NumberIntVal(512) for a non-computed attribute
+      - .cpuunits: planned value cty.NumberIntVal(1024) for a non-computed attribute
+      - .protection: planned value cty.False for a non-computed attribute
+      - .arch: planned value cty.StringVal("amd64") for a non-computed attribute
+      - .swap: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .tty: planned value cty.NumberIntVal(2) for a non-computed attribute
+      - .cores: planned value cty.NumberIntVal(1) for a non-computed attribute
+      - .onboot: planned value cty.False for a non-computed attribute
+      - .cpulimit: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .start: planned value cty.False for a non-computed attribute
+      - .console: planned value cty.True for a non-computed attribute
+2023-11-27T23:24:01.302Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an unexpected new value for proxmox_vm_qemu.testing02 during refresh.
+      - Root object was present, but now absent
+2023-11-27T23:24:01.303Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T23:24:01.305Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12652
+2023-11-27T23:24:01.305Z [DEBUG] provider: plugin exited
+2023-11-27T23:24:01.306Z [DEBUG] building apply graph to check for errors
+2023-11-27T23:24:01.307Z [DEBUG] Resource state not found for node "proxmox_lxc.basic", instance proxmox_lxc.basic
+2023-11-27T23:24:01.307Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:24:01.307Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:24:01.307Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T23:24:01.307Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_id var.proxmox_api_url var.proxmox_api_token_secret]
+2023-11-27T23:24:01.307Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (expand)" references: []
+2023-11-27T23:24:01.307Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T23:24:01.307Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T23:24:01.307Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T23:24:01.308Z [INFO]  backend/local: plan operation completed
+2023-11-27T23:24:05.489Z [INFO]  Terraform version: 1.6.4
+2023-11-27T23:24:05.489Z [DEBUG] using github.com/hashicorp/go-tfe v1.36.0
+2023-11-27T23:24:05.489Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.19.1
+2023-11-27T23:24:05.489Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2023-11-27T23:24:05.489Z [DEBUG] using github.com/zclconf/go-cty v1.14.1
+2023-11-27T23:24:05.489Z [INFO]  Go runtime version: go1.21.3
+2023-11-27T23:24:05.489Z [INFO]  CLI args: []string{"terraform", "apply"}
+2023-11-27T23:24:05.489Z [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2023-11-27T23:24:05.489Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-11-27T23:24:05.489Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-11-27T23:24:05.489Z [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2023-11-27T23:24:05.489Z [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2023-11-27T23:24:05.489Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2023-11-27T23:24:05.489Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2023-11-27T23:24:05.489Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2023-11-27T23:24:05.490Z [INFO]  CLI command args: []string{"apply"}
+2023-11-27T23:24:05.491Z [DEBUG] New state was assigned lineage "0cd583f4-4116-9f0f-cbaf-6303cde9605e"
+2023-11-27T23:24:05.612Z [DEBUG] checking for provisioner in "."
+2023-11-27T23:24:05.616Z [DEBUG] checking for provisioner in "/usr/bin"
+2023-11-27T23:24:05.617Z [INFO]  backend/local: starting Apply operation
+2023-11-27T23:24:05.619Z [DEBUG] created provider logger: level=debug
+2023-11-27T23:24:05.619Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T23:24:05.657Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T23:24:05.658Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12668
+2023-11-27T23:24:05.658Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T23:24:05.666Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T23:24:05.666Z
+2023-11-27T23:24:05.705Z [DEBUG] provider: using plugin: version=5
+2023-11-27T23:24:05.705Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin760326653 network=unix timestamp=2023-11-27T23:24:05.705Z
+2023-11-27T23:24:05.732Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: read unix @->/tmp/plugin760326653: read: connection reset by peer"
+2023-11-27T23:24:05.733Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12668
+2023-11-27T23:24:05.733Z [DEBUG] provider: plugin exited
+2023-11-27T23:24:05.734Z [DEBUG] Building and walking validate graph
+2023-11-27T23:24:05.734Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:24:05.734Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T23:24:05.734Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T23:24:05.734Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T23:24:05.734Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T23:24:05.734Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_id var.proxmox_api_token_secret var.proxmox_api_url]
+2023-11-27T23:24:05.735Z [DEBUG] Starting graph walk: walkValidate
+2023-11-27T23:24:05.735Z [DEBUG] created provider logger: level=debug
+2023-11-27T23:24:05.735Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T23:24:05.744Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T23:24:05.745Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12675
+2023-11-27T23:24:05.745Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T23:24:05.752Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T23:24:05.752Z
+2023-11-27T23:24:05.791Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin1896384505 network=unix timestamp=2023-11-27T23:24:05.791Z
+2023-11-27T23:24:05.791Z [DEBUG] provider: using plugin: version=5
+2023-11-27T23:24:05.821Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T23:24:05.822Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12675
+2023-11-27T23:24:05.823Z [DEBUG] provider: plugin exited
+2023-11-27T23:24:05.823Z [INFO]  backend/local: apply calling Plan
+2023-11-27T23:24:05.823Z [DEBUG] Building and walking plan graph for NormalMode
+2023-11-27T23:24:05.823Z [DEBUG] ProviderTransformer: "proxmox_vm_qemu.testing02 (orphan)" (*terraform.NodePlannableResourceInstanceOrphan) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:24:05.823Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:24:05.823Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_id var.proxmox_api_url var.proxmox_api_token_secret]
+2023-11-27T23:24:05.824Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (expand)" references: []
+2023-11-27T23:24:05.824Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T23:24:05.824Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T23:24:05.824Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T23:24:05.824Z [DEBUG] ReferenceTransformer: "proxmox_vm_qemu.testing02 (orphan)" references: []
+2023-11-27T23:24:05.824Z [DEBUG] Starting graph walk: walkPlan
+2023-11-27T23:24:05.825Z [DEBUG] created provider logger: level=debug
+2023-11-27T23:24:05.825Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T23:24:05.834Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T23:24:05.834Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12682
+2023-11-27T23:24:05.834Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T23:24:05.841Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T23:24:05.841Z
+2023-11-27T23:24:05.881Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin62163026 network=unix timestamp=2023-11-27T23:24:05.881Z
+2023-11-27T23:24:05.881Z [DEBUG] provider: using plugin: version=5
+2023-11-27T23:24:05.911Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/telmate/proxmox\"]" changed the config value, but that value is unused
+2023-11-27T23:24:05.934Z [DEBUG] Resource instance state not found for node "proxmox_lxc.basic", instance proxmox_lxc.basic
+2023-11-27T23:24:05.934Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T23:24:05.935Z [DEBUG] refresh: proxmox_lxc.basic: no state, so not refreshing
+2023-11-27T23:24:05.942Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an invalid plan for proxmox_lxc.basic, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .console: planned value cty.True for a non-computed attribute
+      - .tty: planned value cty.NumberIntVal(2) for a non-computed attribute
+      - .cores: planned value cty.NumberIntVal(1) for a non-computed attribute
+      - .cpulimit: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .arch: planned value cty.StringVal("amd64") for a non-computed attribute
+      - .cpuunits: planned value cty.NumberIntVal(1024) for a non-computed attribute
+      - .protection: planned value cty.False for a non-computed attribute
+      - .memory: planned value cty.NumberIntVal(512) for a non-computed attribute
+      - .swap: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .cmode: planned value cty.StringVal("tty") for a non-computed attribute
+      - .onboot: planned value cty.False for a non-computed attribute
+      - .start: planned value cty.False for a non-computed attribute
+2023-11-27T23:24:05.956Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an unexpected new value for proxmox_vm_qemu.testing02 during refresh.
+      - Root object was present, but now absent
+2023-11-27T23:24:05.957Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T23:24:05.959Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12682
+2023-11-27T23:24:05.959Z [DEBUG] provider: plugin exited
+2023-11-27T23:24:05.961Z [DEBUG] building apply graph to check for errors
+2023-11-27T23:24:05.961Z [DEBUG] Resource state not found for node "proxmox_lxc.basic", instance proxmox_lxc.basic
+2023-11-27T23:24:05.962Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:24:05.962Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:24:05.962Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (expand)" references: []
+2023-11-27T23:24:05.962Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T23:24:05.962Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T23:24:05.962Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T23:24:05.962Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T23:24:05.962Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_id var.proxmox_api_url var.proxmox_api_token_secret]
+2023-11-27T23:24:05.966Z [DEBUG] command: asking for input: "\nDo you want to perform these actions?"
+2023-11-27T23:24:06.965Z [INFO]  backend/local: apply calling Apply
+2023-11-27T23:24:06.965Z [DEBUG] Building and walking apply graph for NormalMode plan
+2023-11-27T23:24:06.966Z [DEBUG] Resource state not found for node "proxmox_lxc.basic", instance proxmox_lxc.basic
+2023-11-27T23:24:06.966Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:24:06.966Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:24:06.966Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (expand)" references: []
+2023-11-27T23:24:06.966Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T23:24:06.966Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T23:24:06.966Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T23:24:06.967Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T23:24:06.967Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_url var.proxmox_api_token_secret var.proxmox_api_token_id]
+2023-11-27T23:24:06.967Z [DEBUG] Starting graph walk: walkApply
+2023-11-27T23:24:06.968Z [DEBUG] created provider logger: level=debug
+2023-11-27T23:24:06.968Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T23:24:06.977Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T23:24:06.977Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12690
+2023-11-27T23:24:06.977Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T23:24:06.993Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T23:24:06.985Z
+2023-11-27T23:24:07.024Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin3737026401 network=unix timestamp=2023-11-27T23:24:07.024Z
+2023-11-27T23:24:07.024Z [DEBUG] provider: using plugin: version=5
+2023-11-27T23:24:07.056Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/telmate/proxmox\"]" changed the config value, but that value is unused
+2023-11-27T23:24:07.095Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an invalid plan for proxmox_lxc.basic, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .memory: planned value cty.NumberIntVal(512) for a non-computed attribute
+      - .start: planned value cty.False for a non-computed attribute
+      - .tty: planned value cty.NumberIntVal(2) for a non-computed attribute
+      - .console: planned value cty.True for a non-computed attribute
+      - .protection: planned value cty.False for a non-computed attribute
+      - .cores: planned value cty.NumberIntVal(1) for a non-computed attribute
+      - .swap: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .cmode: planned value cty.StringVal("tty") for a non-computed attribute
+      - .cpulimit: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .arch: planned value cty.StringVal("amd64") for a non-computed attribute
+      - .cpuunits: planned value cty.NumberIntVal(1024) for a non-computed attribute
+      - .onboot: planned value cty.False for a non-computed attribute
+2023-11-27T23:24:07.095Z [INFO]  Starting apply for proxmox_lxc.basic
+2023-11-27T23:24:07.096Z [DEBUG] proxmox_lxc.basic: applying the planned Create change
+2023-11-27T23:24:07.098Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 23:24:07 [DEBUG] setting computed for "unused" from ComputedKeys: timestamp=2023-11-27T23:24:07.098Z
+2023-11-27T23:24:07.101Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 23:24:07 [DEBUG][LxcCreate] cloning LXC: timestamp=2023-11-27T23:24:07.101Z
+2023-11-27T23:24:09.163Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 23:24:09 [DEBUG][LxcCreate] Waiting for clone becoming ready: timestamp=2023-11-27T23:24:09.163Z
+2023-11-27T23:24:09.171Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 23:24:09 [DEBUG][LxcCreate] We must resize: timestamp=2023-11-27T23:24:09.171Z
+2023-11-27T23:24:09.171Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 23:24:09 [DEBUG][diskResize] resizing disk rootfs: timestamp=2023-11-27T23:24:09.171Z
+2023-11-27T23:24:09.561Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 23:24:09 [DEBUG][LxcCreate] start = false, not starting LXC: timestamp=2023-11-27T23:24:09.560Z
+2023-11-27T23:24:09.591Z [WARN]  Provider "provider[\"registry.terraform.io/telmate/proxmox\"]" produced an unexpected new value for proxmox_lxc.basic, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .hagroup: was null, but now cty.StringVal("")
+      - .lock: was null, but now cty.StringVal("")
+      - .searchdomain: was null, but now cty.StringVal("tinihub.com")
+      - .startup: was null, but now cty.StringVal("")
+      - .template: was null, but now cty.False
+      - .force: was null, but now cty.False
+      - .description: was null, but now cty.StringVal("")
+      - .restore: was null, but now cty.False
+      - .unique: was null, but now cty.False
+      - .hastate: was null, but now cty.StringVal("")
+      - .ignore_unpack_errors: was null, but now cty.False
+      - .nameserver: was null, but now cty.StringVal("192.168.1.203")
+      - .bwlimit: was null, but now cty.NumberIntVal(0)
+      - .hookscript: was null, but now cty.StringVal("")
+      - .tags: was null, but now cty.StringVal("")
+      - .rootfs[0].acl: was null, but now cty.False
+      - .rootfs[0].quota: was null, but now cty.False
+      - .rootfs[0].replicate: was null, but now cty.False
+      - .rootfs[0].ro: was null, but now cty.False
+      - .rootfs[0].shared: was null, but now cty.False
+      - .rootfs[0].size: was cty.StringVal("8G"), but now cty.StringVal("100G")
+2023-11-27T23:24:09.595Z [DEBUG] State storage *statemgr.Filesystem declined to persist a state snapshot
+2023-11-27T23:24:09.595Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T23:24:09.597Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12690
+2023-11-27T23:24:09.597Z [DEBUG] provider: plugin exited
+2023-11-27T23:25:39.885Z [INFO]  Terraform version: 1.6.4
+2023-11-27T23:25:39.885Z [DEBUG] using github.com/hashicorp/go-tfe v1.36.0
+2023-11-27T23:25:39.885Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.19.1
+2023-11-27T23:25:39.885Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2023-11-27T23:25:39.885Z [DEBUG] using github.com/zclconf/go-cty v1.14.1
+2023-11-27T23:25:39.885Z [INFO]  Go runtime version: go1.21.3
+2023-11-27T23:25:39.885Z [INFO]  CLI args: []string{"terraform", "apply"}
+2023-11-27T23:25:39.885Z [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2023-11-27T23:25:39.885Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-11-27T23:25:39.885Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-11-27T23:25:39.885Z [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2023-11-27T23:25:39.885Z [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2023-11-27T23:25:39.885Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2023-11-27T23:25:39.885Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2023-11-27T23:25:39.885Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2023-11-27T23:25:39.886Z [INFO]  CLI command args: []string{"apply"}
+2023-11-27T23:25:39.887Z [DEBUG] New state was assigned lineage "2de1e344-faab-1b9e-cf75-258d09122393"
+2023-11-27T23:25:40.008Z [DEBUG] checking for provisioner in "."
+2023-11-27T23:25:40.012Z [DEBUG] checking for provisioner in "/usr/bin"
+2023-11-27T23:25:40.013Z [INFO]  backend/local: starting Apply operation
+2023-11-27T23:25:40.014Z [DEBUG] created provider logger: level=debug
+2023-11-27T23:25:40.015Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T23:25:40.038Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T23:25:40.038Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12731
+2023-11-27T23:25:40.038Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T23:25:40.046Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T23:25:40.046Z
+2023-11-27T23:25:40.085Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin2000760719 network=unix timestamp=2023-11-27T23:25:40.085Z
+2023-11-27T23:25:40.085Z [DEBUG] provider: using plugin: version=5
+2023-11-27T23:25:40.121Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T23:25:40.122Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12731
+2023-11-27T23:25:40.122Z [DEBUG] provider: plugin exited
+2023-11-27T23:25:40.122Z [DEBUG] Building and walking validate graph
+2023-11-27T23:25:40.123Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:25:40.123Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T23:25:40.123Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T23:25:40.123Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T23:25:40.123Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_url var.proxmox_api_token_id var.proxmox_api_token_secret]
+2023-11-27T23:25:40.123Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T23:25:40.124Z [DEBUG] Starting graph walk: walkValidate
+2023-11-27T23:25:40.124Z [DEBUG] created provider logger: level=debug
+2023-11-27T23:25:40.124Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T23:25:40.133Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T23:25:40.134Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12738
+2023-11-27T23:25:40.134Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T23:25:40.141Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T23:25:40.141Z
+2023-11-27T23:25:40.180Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin3978275318 network=unix timestamp=2023-11-27T23:25:40.180Z
+2023-11-27T23:25:40.180Z [DEBUG] provider: using plugin: version=5
+2023-11-27T23:25:40.211Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T23:25:40.213Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12738
+2023-11-27T23:25:40.213Z [DEBUG] provider: plugin exited
+2023-11-27T23:25:40.213Z [INFO]  backend/local: apply calling Plan
+2023-11-27T23:25:40.213Z [DEBUG] Building and walking plan graph for NormalMode
+2023-11-27T23:25:40.213Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:25:40.214Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (expand)" references: []
+2023-11-27T23:25:40.214Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T23:25:40.214Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T23:25:40.214Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T23:25:40.214Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_secret var.proxmox_api_url var.proxmox_api_token_id]
+2023-11-27T23:25:40.214Z [DEBUG] Starting graph walk: walkPlan
+2023-11-27T23:25:40.214Z [DEBUG] created provider logger: level=debug
+2023-11-27T23:25:40.214Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T23:25:40.224Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T23:25:40.224Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12746
+2023-11-27T23:25:40.224Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T23:25:40.231Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T23:25:40.231Z
+2023-11-27T23:25:40.271Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin3548374167 network=unix timestamp=2023-11-27T23:25:40.271Z
+2023-11-27T23:25:40.271Z [DEBUG] provider: using plugin: version=5
+2023-11-27T23:25:40.297Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/telmate/proxmox\"]" changed the config value, but that value is unused
+2023-11-27T23:25:40.316Z [DEBUG] Resource instance state not found for node "proxmox_lxc.basic", instance proxmox_lxc.basic
+2023-11-27T23:25:40.316Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T23:25:40.316Z [DEBUG] refresh: proxmox_lxc.basic: no state, so not refreshing
+2023-11-27T23:25:40.322Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an invalid plan for proxmox_lxc.basic, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .cmode: planned value cty.StringVal("tty") for a non-computed attribute
+      - .cores: planned value cty.NumberIntVal(1) for a non-computed attribute
+      - .cpulimit: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .swap: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .memory: planned value cty.NumberIntVal(512) for a non-computed attribute
+      - .start: planned value cty.False for a non-computed attribute
+      - .tty: planned value cty.NumberIntVal(2) for a non-computed attribute
+      - .onboot: planned value cty.False for a non-computed attribute
+      - .protection: planned value cty.False for a non-computed attribute
+      - .arch: planned value cty.StringVal("amd64") for a non-computed attribute
+      - .cpuunits: planned value cty.NumberIntVal(1024) for a non-computed attribute
+      - .console: planned value cty.True for a non-computed attribute
+2023-11-27T23:25:40.324Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T23:25:40.326Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12746
+2023-11-27T23:25:40.326Z [DEBUG] provider: plugin exited
+2023-11-27T23:25:40.326Z [DEBUG] building apply graph to check for errors
+2023-11-27T23:25:40.326Z [DEBUG] Resource state not found for node "proxmox_lxc.basic", instance proxmox_lxc.basic
+2023-11-27T23:25:40.327Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:25:40.327Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:25:40.327Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T23:25:40.327Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T23:25:40.327Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T23:25:40.327Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T23:25:40.327Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_secret var.proxmox_api_token_id var.proxmox_api_url]
+2023-11-27T23:25:40.327Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (expand)" references: []
+2023-11-27T23:25:40.330Z [DEBUG] command: asking for input: "\nDo you want to perform these actions?"
+2023-11-27T23:25:42.042Z [INFO]  backend/local: apply calling Apply
+2023-11-27T23:25:42.043Z [DEBUG] Building and walking apply graph for NormalMode plan
+2023-11-27T23:25:42.043Z [DEBUG] Resource state not found for node "proxmox_lxc.basic", instance proxmox_lxc.basic
+2023-11-27T23:25:42.043Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:25:42.043Z [DEBUG] ProviderTransformer: "proxmox_lxc.basic" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/telmate/proxmox"]
+2023-11-27T23:25:42.044Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_secret" references: []
+2023-11-27T23:25:42.044Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic" references: []
+2023-11-27T23:25:42.044Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/telmate/proxmox\"]" references: [var.proxmox_api_token_id var.proxmox_api_url var.proxmox_api_token_secret]
+2023-11-27T23:25:42.044Z [DEBUG] ReferenceTransformer: "proxmox_lxc.basic (expand)" references: []
+2023-11-27T23:25:42.044Z [DEBUG] ReferenceTransformer: "var.proxmox_api_url" references: []
+2023-11-27T23:25:42.044Z [DEBUG] ReferenceTransformer: "var.proxmox_api_token_id" references: []
+2023-11-27T23:25:42.045Z [DEBUG] Starting graph walk: walkApply
+2023-11-27T23:25:42.045Z [DEBUG] created provider logger: level=debug
+2023-11-27T23:25:42.045Z [INFO]  provider: configuring client automatic mTLS
+2023-11-27T23:25:42.055Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 args=[".terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14"]
+2023-11-27T23:25:42.055Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12754
+2023-11-27T23:25:42.055Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14
+2023-11-27T23:25:42.062Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: configuring server automatic mTLS: timestamp=2023-11-27T23:25:42.062Z
+2023-11-27T23:25:42.101Z [DEBUG] provider: using plugin: version=5
+2023-11-27T23:25:42.101Z [DEBUG] provider.terraform-provider-proxmox_v2.9.14: plugin address: address=/tmp/plugin69813353 network=unix timestamp=2023-11-27T23:25:42.101Z
+2023-11-27T23:25:42.132Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/telmate/proxmox\"]" changed the config value, but that value is unused
+2023-11-27T23:25:42.173Z [WARN]  Provider "registry.terraform.io/telmate/proxmox" produced an invalid plan for proxmox_lxc.basic, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .tty: planned value cty.NumberIntVal(2) for a non-computed attribute
+      - .cpuunits: planned value cty.NumberIntVal(1024) for a non-computed attribute
+      - .onboot: planned value cty.False for a non-computed attribute
+      - .arch: planned value cty.StringVal("amd64") for a non-computed attribute
+      - .cpulimit: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .cores: planned value cty.NumberIntVal(1) for a non-computed attribute
+      - .protection: planned value cty.False for a non-computed attribute
+      - .console: planned value cty.True for a non-computed attribute
+      - .memory: planned value cty.NumberIntVal(512) for a non-computed attribute
+      - .start: planned value cty.False for a non-computed attribute
+      - .swap: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .cmode: planned value cty.StringVal("tty") for a non-computed attribute
+2023-11-27T23:25:42.173Z [INFO]  Starting apply for proxmox_lxc.basic
+2023-11-27T23:25:42.174Z [DEBUG] proxmox_lxc.basic: applying the planned Create change
+2023-11-27T23:25:42.177Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 23:25:42 [DEBUG] setting computed for "unused" from ComputedKeys: timestamp=2023-11-27T23:25:42.176Z
+2023-11-27T23:25:42.179Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 23:25:42 [DEBUG][LxcCreate] cloning LXC: timestamp=2023-11-27T23:25:42.179Z
+2023-11-27T23:25:44.241Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 23:25:44 [DEBUG][LxcCreate] Waiting for clone becoming ready: timestamp=2023-11-27T23:25:44.241Z
+2023-11-27T23:25:44.247Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 23:25:44 [DEBUG][LxcCreate] We must resize: timestamp=2023-11-27T23:25:44.247Z
+2023-11-27T23:25:44.247Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 23:25:44 [DEBUG][diskResize] resizing disk rootfs: timestamp=2023-11-27T23:25:44.247Z
+2023-11-27T23:25:44.670Z [INFO]  provider.terraform-provider-proxmox_v2.9.14: 2023/11/27 23:25:44 [DEBUG][LxcCreate] start = false, not starting LXC: timestamp=2023-11-27T23:25:44.670Z
+2023-11-27T23:25:44.703Z [WARN]  Provider "provider[\"registry.terraform.io/telmate/proxmox\"]" produced an unexpected new value for proxmox_lxc.basic, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .hookscript: was null, but now cty.StringVal("")
+      - .ignore_unpack_errors: was null, but now cty.False
+      - .searchdomain: was null, but now cty.StringVal("tinihub.com")
+      - .template: was null, but now cty.False
+      - .unique: was null, but now cty.False
+      - .nameserver: was null, but now cty.StringVal("192.168.1.203")
+      - .lock: was null, but now cty.StringVal("")
+      - .bwlimit: was null, but now cty.NumberIntVal(0)
+      - .description: was null, but now cty.StringVal("")
+      - .hastate: was null, but now cty.StringVal("")
+      - .startup: was null, but now cty.StringVal("")
+      - .hagroup: was null, but now cty.StringVal("")
+      - .force: was null, but now cty.False
+      - .restore: was null, but now cty.False
+      - .tags: was null, but now cty.StringVal("")
+      - .rootfs[0].replicate: was null, but now cty.False
+      - .rootfs[0].ro: was null, but now cty.False
+      - .rootfs[0].shared: was null, but now cty.False
+      - .rootfs[0].size: was cty.StringVal("8G"), but now cty.StringVal("100G")
+      - .rootfs[0].acl: was null, but now cty.False
+      - .rootfs[0].quota: was null, but now cty.False
+2023-11-27T23:25:44.705Z [DEBUG] State storage *statemgr.Filesystem declined to persist a state snapshot
+2023-11-27T23:25:44.705Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-27T23:25:44.708Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/linux_amd64/terraform-provider-proxmox_v2.9.14 pid=12754
+2023-11-27T23:25:44.708Z [DEBUG] provider: plugin exited
